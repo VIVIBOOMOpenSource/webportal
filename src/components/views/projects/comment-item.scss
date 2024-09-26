@@ -1,0 +1,105 @@
+.comment-item{
+  display: flex;
+  width: 100%;
+  max-width:100%;
+  .user-profile-picture{
+    position: relative;
+    .poster-image{
+      border-radius: 50%;
+      overflow: hidden;
+      height: 48px;
+      width: 48px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .image{
+        max-height: 100%;
+        max-width: 100%;
+      }
+    }
+    .user-profile-country{
+      width: 20x;
+      height: 20px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 2;
+      border-radius: 50%;
+    }
+  }
+  .comment-detail{
+    flex: 1;
+    margin: 0 0 0 12px;
+  }
+  .comment-header{
+    display: flex;
+    margin: 0 0 8px;
+    > div{
+      margin: 0 8px 0 0;
+    }
+  }
+  .comment-body{
+    margin: 0 0 8px;
+  }
+  .edit-comment,
+    .reply-comment{
+      textarea {
+        min-height: 80px;
+      }
+      .buttons{
+        display: flex;
+        justify-content: flex-end;
+        .button-element {
+          margin: 0 0 0 16px;
+          width: auto;
+          &.reply,
+          &.save{
+            button,input{
+              padding-right: 40px;
+            }
+          }
+          &.clear {
+            border: 1px solid gray;
+            button{
+              border: 0;
+            }
+          }
+        }
+      }
+    }
+  .comment-footer{
+    display: flex;
+    .likes{
+      margin: 0 8px 8px -8px;
+      height: 32px;
+      line-height: 32px;
+    }
+    .button-element {
+      margin: 0 8px 8px 0;
+      width: 32px;
+      height: 32px;
+      .background{
+        background-color: rgba(0,0,0,0);
+      }
+      .button-status-image{
+        top: 6px;
+        left: 6px;
+        height: 20px;
+        width: 20px;
+        svg{
+          height: 100%;
+          width: 100%;
+          .real-path{
+            fill: #000;
+          }
+        }
+      }
+      &.user-liked .button-status-image svg .real-path{
+        fill: #23d2e2;
+      }
+      button{
+        color: rgba(0,0,0,0);
+      }
+    }
+  }
+}

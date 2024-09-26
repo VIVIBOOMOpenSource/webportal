@@ -1,0 +1,67 @@
+@import "../../../css/styles/variables";
+@import "../../../css/styles/colors";
+
+.chat-wrapper {
+  right: 0;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px 0;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @media screen and (max-width: 1200px) {
+    max-width: inherit;
+  }
+}
+
+.chat-section {
+  display: flex;
+  flex-direction: column;
+  width: inherit;
+  h1 {
+    align-self: center;
+    margin-bottom: 12px;
+  }
+  
+}
+
+.search {
+  height: 130px !important;
+  text-overflow: wrap;
+  font-family: $font;
+  font-weight: 400;
+}
+
+.chat-button {
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+  align-items: center;
+  padding: 0 32px;
+  margin: 0 20px;
+  background-color: $secondary-color;
+  border-radius: 12px;
+  width: auto;
+}
+
+.submit-chat-button {
+  margin-top: 20px;
+  .button-element {
+    border-radius: 20px;
+    width: fit-content;
+  }
+  input {
+    min-width: 150px;
+    font-weight: 400;
+    background-color: $secondary-color;
+    &:hover {
+      background-color: $secondary-color;
+      color: #fff;
+      cursor:pointer;
+      transition: border-color .2s ease-in-out, background-color .2s ease-in-out, color .2s ease-in-out;
+    }
+  }
+}

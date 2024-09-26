@@ -1,0 +1,140 @@
+@import "../../../../css/styles/variables";
+@import "../../../../css/styles/colors";
+
+.project-videos {
+  margin-bottom: 20px;
+  .no-margin {
+    margin: 0;
+  }
+  .item-row {
+    display: flex;
+    align-items: center;
+    > ul {
+      height: auto;
+      max-width: 80%;
+      display: flex;
+      align-items: center;
+      margin: 20px;
+      min-width: 360px;
+      background-color: rgba(220, 220, 220, 0.75);
+      border-radius: 10px;
+      padding: 12px;
+      flex-wrap: wrap;
+      &.photos-upload-container {
+        > li {
+          height: 134px;
+        } 
+      }
+      > li {
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        border-radius: 3px;
+        margin: 8px;
+        display: flex;
+        width: 110px;
+        height: 100%;
+        background-color: #eee;
+        .image {
+          margin: auto;
+          max-height: 110px;
+          max-width: 110px;
+          min-height: 60px;
+          min-width: 60px;
+        }
+        .non-active-cover {
+          pointer-events: none;
+          background-color: rgba(0, 0, 0, 0.25);
+          position: absolute;
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+        }
+        .delete-button {
+          cursor: pointer;
+          border: 0;
+          position: absolute;
+          top: 2px;
+          right: 2px;
+          background-color: #555;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          svg {
+            width: 15px;
+            height: 15px;
+            fill: #fff;
+          }
+        }
+      }
+    }
+    .add-video {
+      width: 80%;
+      max-width: 120px;
+      margin: 20px;
+      height: 40px;
+      border-radius: 12px;
+      background-color: $secondary-color;
+      align-items: center;
+      justify-content: center;
+      .add-button {
+        color: white;
+        font-size: 16px;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        input {
+          display: none;
+        }
+        &.disabled {
+          cursor: not-allowed;
+        }
+        &.greyed {
+          pointer-events: none;
+          background-color: grey;
+          border-radius: 12px;
+          &.error-text {
+            color: red;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 595px) {
+      flex-direction: column;
+      margin-bottom: 30px;
+    }
+  }
+  .video-preview {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    video {
+      width: 100%;
+      border-radius: 10px;
+      max-height: 734px;
+    }
+  }
+  .video-uploading {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    h3 {
+      margin: 0 0 0 10px;
+    }
+  }
+}

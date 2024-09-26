@@ -1,0 +1,136 @@
+@import "../../../css/styles/buttons.scss";
+
+.welcome-modal-container {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2000; /* or maybe higher */
+  background-color: rgb(36, 36, 36);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-modal-background {
+  min-width: 60%;
+  background-color: #fff;
+  z-index: 3000;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  padding: 10px;
+  overflow-y:scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  
+  .welcome-modal-background::-webkit-scrollbar {
+    display: none;
+  }
+
+  .button-container {
+    display: flex;
+    width: 90%;
+    height: 52px;
+    margin: 16px;
+    justify-content: space-between;
+  }
+  .button {
+    line-height: 52px;
+    height: 52px;
+    background-color: #23d2e2;
+    border-radius: 12px;
+    font-weight: 700;
+    width: 100px;
+    transition: none;
+  }
+  .hide-button {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.shake-horizontal {
+  -webkit-animation: shake-horizontal 0.8s
+    cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.5s both;
+  animation: shake-horizontal 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.5s
+    both;
+}
+@-webkit-keyframes shake-horizontal {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+  80% {
+    -webkit-transform: translateX(8px);
+    transform: translateX(8px);
+  }
+  90% {
+    -webkit-transform: translateX(-8px);
+    transform: translateX(-8px);
+  }
+}
+@keyframes shake-horizontal {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+  80% {
+    -webkit-transform: translateX(8px);
+    transform: translateX(8px);
+  }
+  90% {
+    -webkit-transform: translateX(-8px);
+    transform: translateX(-8px);
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .welcome-modal-background {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 979px) {
+  .welcome-modal-background {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  .welcome-modal-background {
+    width: 100%;
+  }
+}

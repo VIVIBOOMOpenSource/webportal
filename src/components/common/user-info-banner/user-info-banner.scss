@@ -1,0 +1,300 @@
+@import "../../../css/styles/variables";
+@import "../../../css/styles/colors";
+
+.user-info-banner {
+  font-family: $font;
+  justify-items: center;
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  @media screen and (max-width: 980px) {
+    padding-top: 50px;
+  }
+  .user-cover-image {
+    min-height: 20vw;
+    width: 100%;
+    height: fit-content;
+    align-items: center;
+    overflow: hidden;
+    object-fit: contain;
+    .image {
+      height: 100%;
+      width: 100%;
+      border-radius: 0;
+    }
+  }
+  .user-profile-basic-info{
+    display: flex;
+    background-color: #fff;
+    padding: 10px;
+    height: 80px;
+    justify-content: space-between;
+    .user-profile-image-name-container{
+      display: flex;
+      .user-profile-image-container {
+        position: relative;
+        width: 120px;
+        margin:0 0 0 40px;
+        .user-profile-image {
+          border-radius: 50%;
+          overflow: hidden;
+          position: absolute;
+          top: -45%;
+          height: 110px;
+          width: 110px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: 5px #fff solid;
+          img {
+            max-width: 100%;
+          }
+        }
+        .birthday-hat {
+          position: absolute;
+          top: -78px;
+          left: 30px;
+          width: 60px;
+        }
+        .user-profile-country {
+          width: 35px;
+          height: 35px;
+          position: absolute;
+          top: -50%;
+          z-index: 25;
+          border-radius: 50%;
+          &.status {
+            top: 0%;
+          }
+        }
+      }
+      .user-real-name {
+        margin: auto 0 auto 20px;
+        font-weight: 700;
+        font-size: large;
+        color: $primary-color;
+        @media screen and (max-width: 300px) {
+          font-size: 15px;
+        }
+      }
+    }
+    .user-data {
+      margin-left: auto;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      .data-btn {
+        font-family: $font;
+        cursor: pointer;
+        padding: 8px 20px;
+        border-radius: 30px;
+        width: fit-content;
+        border: 1px solid #ddd;
+        margin: 0 10px;
+        background-color: #fff;
+        color: $primary-color;
+        font-weight: 500;
+        font-size: 16px;
+        transition: all ease-in 300ms;
+        &:hover{
+          background-color: #f5f3f3;
+        }
+        .more-button {
+          text-decoration: none;
+        }
+      }
+      .chat-ctn {
+        height: 80%;
+        display: flex;
+        margin-left: 5px;
+        padding: 0 15px;
+        align-items: center;
+        border-left: 1px solid #ccc;
+        .chat-btn {
+          font-family: $font;
+          cursor: pointer;
+          padding: 8px 20px;
+          border-radius: 30px;
+          width: fit-content;
+          border: 1px solid #ddd;
+          background-color: $secondary-color;
+          color: #fff;
+          font-weight: 500;
+          font-size: 16px;
+          transition: all ease-in 300ms;
+        }
+        .chat-btn:hover {
+          background-color: $secondary-color-hover;
+        }
+      }
+      @media screen and (max-width: 1024px) {
+        .data-btn {
+          font-weight: 500;
+          font-size: 10px;
+        }
+        .chat-ctn .chat-btn {
+          font-weight: 500;
+          font-size: 10px;
+        }
+      }
+      @media screen and (max-width: 840px) {
+        .data-btn {
+          display: none;
+        }
+        .chat-ctn {
+          
+        border-left: none;
+        }
+      }
+      @media screen and (max-width: 770px) {
+          display: none;
+      }
+    }
+  }
+  .edit-button-container {
+    position: relative;
+    right: 20px;
+    top: 20px;
+    &:hover {
+      text-decoration: none;
+    }
+    .edit-button{
+      fill: #fff;
+      background-color: $secondary-color;
+      padding: 5px;
+      border-radius: 80px;
+      width: 30px;
+      height: 30px;
+      &:hover{
+        background-color: $secondary-color-hover;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+    .edit-gear-button{
+      fill: #fff;
+      background-color: $secondary-color;
+      padding: 5px;
+      border-radius: 80px;
+      width: 30px;
+      height: 30px;
+      &:hover{
+        background-color: $secondary-color-hover;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+    .edit-profile-button{
+      margin: -7px 0 0 0px;
+      padding: 10px;
+      background-color: $secondary-color;
+      width: fit-content;
+      white-space: nowrap;
+      border-radius: 80px;
+      font-weight: 400;
+      color: #fff;
+      box-shadow: 4px 7px 12px 0 rgba(0, 0, 0, 0.10);
+      font-family: $font;
+      transition: border-color .2s ease-in-out, background-color .2s ease-in-out, color .2s ease-in-out;
+      &:hover {
+        background-color: $secondary-color-hover;
+        color: #fff;
+        cursor:pointer;
+      }
+    }
+    @media screen and (max-width: 500px) {
+      .edit-profile-button{
+        display: none;
+      }
+      
+      .edit-gear-button{
+        display: inline;
+      }
+    }
+    @media screen and (min-width: 501px) {
+      .edit-profile-button{
+        display: inline;
+      }
+      
+      .edit-gear-button{
+        display: none;
+      }
+    }
+  }
+  .no-edit-button-container{
+    display: none;
+  }
+  .user-info-detail {
+    position: relative;
+    width: 100%;
+    z-index: 3;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    .user-real-name {
+      font-weight: 700;
+      font-size: 28px;
+      margin-right: 10px;
+    }
+    .username {
+      font-weight: 700;
+      margin: 0 0 12px;
+    }
+    .user-info-details-items {
+      margin: 0;
+      width: 70%;
+      display: flex;
+      padding: 0 12px;
+      justify-content: center;
+      li {
+        padding: 4px;
+        margin: 0;
+        width: 20%;
+        a {
+          margin: 0;
+          display: block;
+        }
+        img {
+          margin: 0;
+          max-width: 100%;
+          max-height: 100%;
+        }
+        &.more-badges {
+          .image {
+            height: 100%;
+            width: 100%;
+            background-image: url("../../../css/imgs/boom-imgs/badge/blank-s.png");
+            background-repeat: no-repeat;
+            background-size: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .text {
+              height: 26px;
+              font-weight: 700;
+              padding: 0 0 6px;
+              color: #fff;
+            }
+          }
+        }
+        &.user-info-details-item-stat {
+          padding: 5px 10px;
+          display: flex;
+          flex-flow: column;
+          justify-content: center;
+          align-items: center;
+          .number {
+            font-weight: 700;
+            font-size: 22px;
+          }
+          .text {
+            color: #adafca;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}

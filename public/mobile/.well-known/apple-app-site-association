@@ -1,0 +1,68 @@
+{
+  "applinks": {
+      "apps": [],
+      "details": [
+          {
+              "appIDs": [ "234HHBM4UP.com.vivita.viviboom" ],
+              "appID": "234HHBM4UP.com.vivita.viviboom",
+              "components": [
+                  {
+                      "/": "/",
+                      "comment": "Front page"
+                  },
+                  {
+                      "/": "/projects",
+                      "comment": "Projects page"
+                  },
+                  {
+                      "/": "/badges",
+                      "comment": "Badges page"
+                  },
+                  {
+                      "/": "/events",
+                      "comment": "Events page"
+                  },
+                  {
+                      "/": "/notifications",
+                      "comment": "Notifications page"
+                  },
+                  {
+                      "/": "/submit-project",
+                      "comment": "Submit Project page"
+                  },
+                  {
+                      "/": "/my-bookings",
+                      "comment": "My Bookings page"
+                  },
+                  {
+                      "/": "/project/*",
+                      "comment": "Project page"
+                  },
+                  {
+                      "/": "/badge/*",
+                      "comment": "Badge page"
+                  },
+                  {
+                      "/": "/event/*",
+                      "comment": "Event page"
+                  },
+                  {
+                      "/": "/member/*",
+                      "comment": "Member page"
+                  },
+                  {
+                      "/": "*",
+                      "comment": "Home page"
+                  }
+              ],
+              "paths": [ "/", "/projects", "/badges", "/events", "/notifications", "/submit-project", "/my-bookings", "/project/*", "/badge/*", "/event/*", "member/*", "*" ]
+          }
+      ]
+  },
+  "activitycontinuation": {
+      "apps": [ "234HHBM4UP.com.vivita.viviboom" ]
+  },
+  "webcredentials": {
+     "apps": [ "234HHBM4UP.com.vivita.viviboom" ]
+  }
+}

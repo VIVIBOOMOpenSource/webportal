@@ -1,0 +1,22 @@
+.builder-pal-chat {
+  color: #3e3f5e;
+  font-family: Rajdhani,sans-serif;
+  line-height: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .builder-pal {
+    max-width: 1280px;
+    margin-top: 32px;
+    width: 100%;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    .title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-top: 8px;
+    }
+  }
+}

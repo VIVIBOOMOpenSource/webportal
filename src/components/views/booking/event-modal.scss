@@ -1,0 +1,294 @@
+@import "../../../css/styles/variables";
+@import "../../../css/styles/colors";
+
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. .popup-box
+-------------------------------------------------------------------*/
+
+/*---------------------------------
+    47. POPUP EVENT
+---------------------------------*/
+.popup-event {
+  width: 90%;
+  max-width: 584px !important;
+  border-radius: 12px !important;
+  background-color: #fff !important;
+  padding: 0 !important;
+  overflow: visible !important;
+
+  .popup-event-cover {
+    width: 100%;
+    height: 204px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    overflow: hidden;
+    background-color: #f8f8fb;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .popup-event-info {
+    border-radius: inherit;
+    position: relative;
+    overflow-y: auto;
+    max-height: 90vh;
+    overflow-x: hidden;
+
+    .image {
+      // height: 300px;
+      img {
+        height: 100%;
+        width: 100%;
+
+        // max-height: 100%;
+        // .resize-best-fit {
+        //   /* Resize to best fit and retain aspect ratio.
+        //      Will cause gap if aspect ratio of box is different from image. */
+        //   background-size: contain;
+        // }
+      }
+    }
+  }
+
+  .popup-event-info-body {
+    padding: 18px 28px 32px;
+  }
+
+  .popup-event-title {
+    font-size: 24px;
+    font-weight: 700;
+    @media screen and (max-width: 500px) {
+      margin-top: 20px;
+    } 
+  }
+
+  .popup-event-subtitle {
+    margin-top: 32px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .popup-event-text {
+    margin-top: 16px;
+    font-size: 0.875rem;
+    line-height: 1.7142857143em;
+    font-weight: 400;
+    white-space: pre-wrap;
+  }
+
+  .event-facilitators {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 12px 0 0 0;
+    .facilitator-item {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 18px;
+      margin: 8px;
+      border-radius: 8px;
+      cursor: pointer;
+      .image {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+      .facilitator-name {
+        font-weight: 400;
+        margin: 0;
+        color: $primary-color;
+        margin-top: 12px;
+      }
+      svg {
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        top: -4px;
+        right: -4px;
+        fill: #666;
+      }
+      &:hover {
+        background-color: #f2f2f2;
+      }
+    }
+    .disabled {
+      pointer-events: none;
+    }
+  }
+  .facilitator-subtitle {
+    font-size: 15px;
+    font-weight: 400;
+    margin: 8px 0 18px;
+  }
+  .facilitator-skills {
+    display: flex;
+    flex-direction: column;
+    .skill-item {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      margin-bottom: 12px;
+      .skill-bullet {
+        font-size: 15px;
+        line-height: 28px;
+        font-weight: 400;
+        margin-right: 6px;
+      }
+      .skill-text {
+        flex: 1;
+        font-size: 15px;
+        line-height: 28px;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .decorated-feature-list {
+    margin-top: 20px;
+    @media screen and (max-width: 580px) {
+      flex-direction: column;
+    }
+  }
+
+  .popup-event-button {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: end;
+    margin-left: 60%;
+    margin-bottom: 25px;
+    position: relative;
+    &.tertiary {
+      font-family: $font;
+      background-color: $secondary-color;
+      box-shadow: 4px 7px 12px 0 rgba(97, 93, 250, 0.2);
+      border-radius: 160px;
+      font-size: 16px;
+      font-weight: 400;
+      &:hover {
+        background-color: $secondary-color-hover;
+      }
+    }
+    @media screen and (max-width: 600px) {
+      margin-left: 54%;
+    }
+    @media screen and (max-width: 500px) {
+      margin-left: 38%;
+    }    
+    @media screen and (max-width: 400px) {
+      margin-left: 25%;
+    }
+    @media screen and (max-width: 400px) {
+      margin: 0 auto;
+    }
+  }
+
+  & > .content-actions {
+    border-top: 1px solid #eaeaf5;
+    margin: 0 28px;
+  }
+
+  /*---------------------------------
+      48. POPUP CLOSE BUTTON
+  ---------------------------------*/
+  .popup-close-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 10px !important;
+    background-color: #45437f;
+    cursor: pointer !important;
+    position: absolute !important;
+    top: -20px !important;
+    right: -20px !important;
+    z-index: 2;
+    padding: 0 !important;
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+      background-color: $secondary-color-hover;
+    }
+
+    .popup-close-button-icon {
+      pointer-events: none;
+    }
+  }
+
+  /*---------------------------------
+      49. DECORATED FEATURE LIST
+  ---------------------------------*/
+  .decorated-feature-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .decorated-feature {
+      flex: 1;
+      margin-top: 18px;
+      @media screen and (max-width: 580px) {
+        width: 100%;
+      }
+    }
+    .decorated-feature-none {
+      display:none;
+    }
+  }
+
+  /*---------------------------------
+      50. DECORATED FEATURE
+  ---------------------------------*/
+  .decorated-feature {
+    display: flex;
+    padding-right: 18px;
+
+    .decorated-feature-icon {
+      margin-top: 2px;
+      flex-shrink: 0;
+      fill: $secondary-color;
+    }
+
+    .decorated-feature-info {
+      margin-left: 12px;
+    }
+
+    .decorated-feature-title {
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .decorated-feature-text {
+      margin-top: 2px;
+      color: #8f91ac;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: calc(20 / 14) * 1em;
+    }
+  }
+
+  .modal-close-button {
+    display: none;
+  }
+
+  .icon-cross {
+    fill: #fff;
+    width: 12px;
+    height: 12px;
+  }
+  .icon-events,
+  .icon-members {
+    fill: #adafca;
+    width: 20px;
+    height: 20px;
+  }
+}

@@ -1,0 +1,216 @@
+@import "../../../css/styles/colors";
+@import "../../../css/styles/variables";
+@import "../../../sass/color";
+
+.public-about-tab {
+  max-width: 1024px;
+  width: 100%;
+  margin: 20px auto;
+  padding: 10px 40px 40px 40px;
+  @media screen and (max-width: 428px) {
+    padding: 10px 20px 40px 20px;
+  }
+  .section-title {
+    color: #183b56;
+    font-weight: 600;
+    font-size: 30px;
+    margin: 0 0 24px 30px;
+  }
+  .about-me {
+    .portfolio-description {
+      margin-top: 10px;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 20px;
+      color: #183b56;
+      white-space: pre-wrap;
+      font-size: 1.1em;
+      line-height: 1.35em;
+    }
+  }
+  .all-badges {
+    margin-top: 30px;
+    position: relative;
+    .portfolio-badges-container {
+      width: 100%;
+      background-color: #fff;
+      border-radius: 20px;
+      .portfolio-badges {
+        display: flex;
+        margin: 15px 30px;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        .badge-item-container {
+          width: 156px;
+          .public-badge-item {
+            margin: 30px 0 10px 0;
+            padding: 12px 0 0 0;
+          }
+        }
+      }
+    }
+  }
+  .all-challenges {
+    margin-top: 30px;
+    position: relative;
+    .portfolio-challenges-container {
+      width: 100%;
+      background-color: #fff;
+      border-radius: 20px;
+      .portfolio-challenges {
+        display: flex;
+        margin: 15px 30px;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        .challenge-item-container {
+          width: 156px;
+          .public-challenge-item {
+            margin: 30px 0 10px 0;
+            padding: 12px 0 0 0;
+            .link{
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+            }
+          }
+        }
+      }
+    }
+  }
+  .all-projects {
+    margin-top: 30px;
+    position: relative;
+    .portfolio-projects-container {
+      background-color: #fff;
+      border-radius: 20px;
+      .portfolio-projects {
+        overflow: auto;
+        padding: 15px 30px;
+        @media screen and (max-width: 428px) {
+          padding: 10px 0;
+        }
+        .project-horizontal-list {
+          padding: 45px 0;
+          li {
+            margin: 0;
+            height: 100%;
+            display: flex;
+            flex-flow: column;
+          }
+        }
+      }
+    }
+  }
+  .all-events {
+    margin-top: 30px;
+    position: relative;
+    .portfolio-events-container {
+      background-color: #fff;
+      border-radius: 20px;
+      .portfolio-events {
+        padding: 30px;
+        @media screen and (max-width: 428px) {
+          padding: 10px 0;
+        }
+        overflow: auto;
+        display: flex;
+        justify-content: flex-start;
+        .public-event-item {
+          width: 270px;
+          margin: 0 12px;
+        }
+      }
+    }
+  }
+  .all-members {
+    margin-top: 30px;
+    position: relative;
+    .portfolio-members-container {
+      background-color: #fff;
+      border-radius: 20px;
+      .portfolio-members {
+        padding: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        @media screen and (max-width: 720px) {
+          display: flex;
+          flex-direction: column;
+        }
+        li {
+          margin: 8px;
+        }
+      }
+    }
+  }
+  .portfolio-show-more {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #ddd;
+    transition: 0.3s all ease-in-out;
+    cursor: pointer;
+    .show-more-text {
+      color: $primary-color;
+      font-weight: 500;
+    }
+    svg {
+      fill: $primary-color;
+      width: 18px;
+      height: 18px;
+      margin-left: 4px;
+    }
+    &:hover {
+      transform: scale(1.05);
+      .show-more-text {
+        color: $secondary-color;
+      }
+      svg {
+        fill: $secondary-color;
+      }
+    }
+  }
+}
+
+.carousel-button-group{
+  position: absolute;
+  width: fit-content;
+  display: flex;
+  top: 0;
+  right: 12px;
+  .arrow-button {
+    background-color: #fff;
+    box-shadow: 4px 7px 12px 0 rgba(0, 0, 0, 0.10);
+    border-radius: 80px;
+    width: 40px;
+    height: 40px;
+    margin: 0 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    @media screen and (max-width: 500px){
+      margin-left: 5px; 
+      height: 28px;
+      width: 28px;
+    }
+    .category-arrow-icon {
+      fill: #adafca;
+      width: 18px;
+      height: 18px;
+      @media screen and (max-width: 500px){
+        height: 15px;
+        width: 15px;
+      }
+    }
+    &:hover{
+      background-color: $secondary-color;
+      transform: scale(1.05);
+      .category-arrow-icon{
+        fill: #fff
+      }
+    }
+  }
+}

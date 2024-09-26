@@ -1,0 +1,150 @@
+@import "../../../css/styles/variables";
+@import "../../../css/styles/colors";
+
+
+$navi-height: 75px;
+$navi-width: 260px;
+
+.claim-reward {
+  .reward-background{
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-image: url('../../../css/imgs/reward-background.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 0;
+  }
+  .reward-content{
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    overflow: auto;
+    .reward-info{
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      margin: 120px auto 0;
+      width: 80%;
+      .wallet-main-container{
+        width: 100%;
+        border-radius: 10px;
+        background-color: #fff;
+      }
+      .reward-info-container{
+        margin: 30px 40px;
+        .rewards-title{
+          font-size: 30px;
+          font-weight: bold;
+        }
+      }
+      .vivicoin-container {
+        background-color: #e2eef1;
+        width: fit-content;
+        border-radius: 10px;
+        padding: 10px 60px 0 10px;
+        margin-top: 30px;
+        .vivicoin-sub-container{
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+        }
+        .vivicoin-image-container {
+          display: flex;
+          flex-direction: column;
+          .vivicoin-image{
+            animation: bounce 2s both infinite;
+          }
+          .shade {
+            align-self: center;
+            margin-left: 1px;
+            width: 40px;
+            height: 25px;
+            background-color: #ccc;
+            border-radius: 40px;
+            transform: rotateX(80deg);
+          }
+        }
+        .vivicoin-amount-container{
+          margin: 0 15px;
+          .vivicoin-amount-text{
+            font-size: 15px;
+            color:#5b6061;
+          }
+          .vivicoin-amount{
+            font-size: 28px;
+          }
+        }
+        @keyframes bounce{
+          0%, 100% { transform: translate3d(0, 5px, 0);}
+          50% { transform: translate3d(0, 0, 0);}
+        }
+      }
+      .no-wallet-container{ 
+        .no-wallet-text{
+          color: $secondary-color;
+        }
+      }
+    }
+    .reward-claim-link-container {
+      z-index: 1;
+      background-color: #fff;
+      width: fit-content;
+      border-radius: 10px;
+      padding: 20px 60px 20px 10px;
+      margin-top: 20px;
+      text-decoration: none;
+      transition: all 0.3s ease-in-out;
+      &:hover{
+        background-color: #efefef;
+        .claim-reward-icon,
+        .claim-reward-text{
+          color: $secondary-color;
+        }
+      }
+      .claim-reward-link{
+        display: flex;
+        flex-direction: row;
+      }
+      .claim-reward-icon{
+        width: 24px;
+        height: 24px;
+        margin: 0 10px;
+      }
+      .claim-reward-text{
+        font-size: 18px;
+        margin: auto 0;
+      }
+    }
+  }
+  
+  .welcome-form{
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    .form-box{
+      position: relative;
+      z-index: 1;
+      background-color: #FFF;
+      width: 484px;
+      padding: 64px;
+      border-radius: 12px;
+      background-color: #fff;
+      box-shadow: 0 0 60px 0 rgba(94,92,154,.12);
+      position: relative;
+      display: none;
+      &.active{
+        display: block;
+      }
+    }
+  }
+}
+
+
+
+

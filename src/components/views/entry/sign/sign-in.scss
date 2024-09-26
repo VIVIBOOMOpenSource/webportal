@@ -1,0 +1,209 @@
+@import "../../../../sass/form";
+@import "../../../../sass/color";
+@import "../../../../sass/color-theme";
+@import "../../../../sass/font";
+@import "../../../../css/styles/colors";
+
+.show-password {
+  background-color: #fff;
+  top: 4px;
+  right: 4px;
+  position: absolute;
+  border: 0px;
+  width: 45px;
+  height:45px;
+  z-index: 10;
+  cursor: pointer;
+  transition: 300ms;
+  border-radius: 10px;
+  svg {
+    fill: $primary-color;
+    margin: 20%;
+    width: 60%;
+    height: 60%;
+  }
+  &:hover {
+    background-color: #eee;
+  }
+}
+
+
+.sign-in{
+  .signin-info{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-align: center;
+    
+    .signin-info-text{
+      color: $primary-color;
+      font-size: 24px;
+      font-weight: 700;
+      margin: 24px 0;
+      font-weight: 700;
+    }
+    .signin-options{
+      display: flex;
+      flex-direction: row;
+      margin: 8px 0 28px 0;
+      .signin-option {
+        width: 180px;
+        height: 180px;
+        margin: 0 8px;
+        border-radius: 24px;
+        border: 3px solid #ebe9f5;
+        cursor: pointer;
+        transition: all 0.2s;
+        &:hover {
+          box-shadow: #ebe9f5 0px 3px 8px;
+        }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @media screen and (max-width: 500px) {
+          width: 160px;
+          height: 160px;
+        }
+        .icon {
+          height: 80px;
+          width: 80px;
+          margin: 12px 0;
+          object-fit: contain;
+          border-radius: 50%;
+          -webkit-user-drag: none;
+          user-select: none;
+          -webkit-user-select: none;
+        }
+        .signin-option-text {
+          color: $primary-color;
+          font-size: 20px;
+          user-select: none;
+          -webkit-user-select: none;
+        }
+      }
+    }
+  }
+  .institution-info {
+    padding-top: 30px;
+    .back-button {
+      height: 48px;
+      width: 48px;
+      top: 12px;
+      left: 12px;
+      position: absolute;
+      border-radius: 2px;
+      padding: 8px;
+      cursor: pointer;
+      svg{
+        height: 100%;
+        width: 100%;
+        .real-path{
+          fill: $primary-color;
+        }
+      }
+      z-index: 150;
+      &:hover{
+        box-shadow: inset 0px 0px 250px 0px rgba(0,0,0,.1);
+      }
+      &:active{
+        box-shadow: inset 0px 0px 250px 0px rgba(0,0,0,.2);
+      }
+    }
+    .institution-info-text {
+      width: 100%;
+      text-align: left;
+      font-size: 18px;
+      line-height: 24px;
+      color: $primary-color;
+      font-weight: 600;
+    }
+    .institution-list {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      .institution-item {
+        width: 100%;
+        font-size: 18px;
+        color: $secondary-color;
+        text-align: left;
+        margin: 8px 0;
+        cursor: pointer;
+      }
+    }
+  }
+  .login-form {
+    .back-button {
+      height: 48px;
+      width: 48px;
+      top: 12px;
+      left: 12px;
+      position: absolute;
+      border-radius: 2px;
+      padding: 8px;
+      cursor: pointer;
+      svg{
+        height: 100%;
+        width: 100%;
+        .real-path{
+          fill: $primary-color;
+        }
+      }
+      z-index: 150;
+      &:hover{
+        box-shadow: inset 0px 0px 250px 0px rgba(0,0,0,.1);
+      }
+      &:active{
+        box-shadow: inset 0px 0px 250px 0px rgba(0,0,0,.2);
+      }
+    }
+  }
+
+  .button-element{
+    border-radius: 10px;
+  }
+
+  .cookie-consent{
+    margin-bottom: 10px
+  }
+
+  .underlined{
+    color: rgb(108, 123, 253);
+  }
+
+  
+  .links-container{
+    margin: 30px 0 0;
+    .app-download-text,
+    .link{
+      display: block;
+      margin: 10px 0 0 0;
+      font-size: 15px;
+      cursor: pointer;
+      color: $primary-color;
+      &:hover {
+        color: rgba(24, 59, 86, 0.7);
+        text-decoration: none;
+      }
+    }
+  }
+  
+  .new-section-container {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .new-section-desc {
+    display: block;
+    margin: 10px 0 0 0;
+    font-size: 17px;
+    color: $primary-color;
+  }
+  .new-section-button {
+    margin: 10px 0 20px;
+    width: 250px;
+  }
+}

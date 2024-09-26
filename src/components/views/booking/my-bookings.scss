@@ -1,0 +1,75 @@
+@import "../../../css/styles/variables";
+@import "../../../css/styles/colors";
+
+.mybooking {
+  margin: 0 auto;
+  font-family: $font;
+  
+  .mybooking-header-container{
+    width:100%;
+    height: 250px;
+    background-color: #fff;
+    .mybooking-header-title-container{
+      max-width: $content-max-width;
+      padding: 40px 0 0 50px;
+      color: $primary-color;
+      @media screen and (max-width: 375px) {
+        padding: 40px 0 0 30px;
+      }
+      .mybooking-title{
+        margin-top: 50px;
+        font-size: 48px;
+        font-weight: 700;
+        @media screen and (max-width: 324px) {
+          margin-top: 30px;
+        }
+      }
+      .title-description {
+        font-weight: 400;
+      }
+    }
+  }
+  .separator-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width:100%;
+    background-color: #fff;
+    border-top: 2px solid #e2eef1;
+    border-bottom: 1px solid #e2eef1;
+    @media screen and (max-width: 500px) {
+      justify-content: center;
+    }
+    .button {
+      margin: 12px 50px;
+      background-color: $secondary-color;
+      box-shadow: 4px 7px 12px 0 rgba(97, 93, 250, 0.2);
+      width: 15%;
+      min-width: 200px;
+      white-space: nowrap;
+      border-radius: 80px;
+      font-size: 14px;
+      transition: all 0.3s ease-out;
+      &:hover {
+        background-color: $secondary-color-hover;
+        transform: scale(1.01);
+      }
+    }
+  }
+  .body{
+    padding: $content-padding;
+    .header {
+      top: 50px;
+      padding: 20px;
+      color: $primary-color;
+      @media screen and (max-width: 500px) {
+        padding-left: 0px;
+      }
+    }
+    .message {
+      padding-left: 30px;
+      color: $primary-color;
+      font-weight: 400;
+    }
+  }
+}

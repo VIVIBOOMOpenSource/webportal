@@ -1,0 +1,142 @@
+$fs-11: 11px;
+$fs-12: 12px;
+$fs-14: 14px;
+$fs-16: 16px;
+$fs-18: 18px;
+$fs-20: 20px;
+$fs-24: 24px;
+$weight-medium: 500;
+$weight-bold: 700;
+$white: #fff;
+$red-dark: #fd4350;
+$black:#3e3f5e;
+$color-icon: #adafca;
+$color-divider:#eaeaf5;
+$color-text-2: #3e3f5e;
+$color-text-alt:#8f91ac;
+$color-primary: #23d2e2;
+$color-secondary: #615dfa;
+$color-secondary-darker: #45437f;
+$color-primary-background: #23d2e2;
+$color-box-background: #fff;
+$color-box-background-alt:#fcfcfd;
+$shadow-light: 0 0 40px 0 rgba(94, 92, 154, 0.06);
+$shadow-darker: 3px 5px 20px 0px rgba(94, 92, 154, 0.16);
+
+.registration-info {
+  padding: 32px 28px;
+  position: relative;
+  overflow-y: scroll;
+  max-height: 90vh;
+
+  .registration-title {
+    font-size: $fs-24;
+    font-weight: $weight-bold;
+  }
+  .registration-subtitle {
+    margin-top: 10px;
+    font-size: $fs-18;
+    font-weight: $weight-medium;
+  }
+
+  .registration-actions {
+    display: flex;
+    justify-content: center;
+    padding: 28px 32px;
+    .registration-button {
+      background-color: $white;
+      margin-right: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100px;
+      height: 40px;
+      border: 1px solid transparent;
+      border-radius: 10px;
+      font-size: $fs-16;
+      font-weight: $weight-bold;
+      cursor: pointer;
+      transition: border-color .2s ease-in-out, background-color .2s ease-in-out, color .2s ease-in-out;
+
+      &.primary {
+        color: $red-dark;
+        border-color: $red-dark;
+        &:hover {
+          color: $white;
+          background-color: $red-dark;
+          border-color: $red-dark;
+        }
+      }
+
+      &.secondary {
+        color: $color-secondary;
+        border-color: $color-secondary;
+        &:hover {
+          color: $white;
+          background-color: $color-secondary;
+          border-color: $color-secondary;
+        }
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+
+  .registration-form {
+    padding: 20px;
+
+    label, .multiple {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 12px;
+      color: #3e3f5e;
+      font-size: 1.1em;
+    }
+
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+      margin: 12px 0;
+    }
+
+    select {
+      &:focus-visible {
+        outline:none;
+      }
+      padding: 4px 16px;
+      margin: 12px 0;
+    }
+
+    fieldset {
+      border: 1px solid #dedeea;
+      padding: 14px 18px;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: border-color .2s ease-in-out;
+      margin: 12px 0 0 0;
+      &:focus-within {
+        border-color: #615dfa;
+      }
+
+      .form-option {
+        display: flex;
+        flex-direction: row;
+        margin: 5px 0;
+        input {
+          margin-right: 10px;
+        }
+      }
+    }
+
+    .required-box {
+      height: 0;
+      border-bottom: none;
+      border-color: transparent;
+      pointer-events: none;
+    }
+  }
+}

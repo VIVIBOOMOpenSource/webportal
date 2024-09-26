@@ -1,0 +1,208 @@
+@import "../../../../css/styles/variables";
+@import "../../../../css/styles/colors";
+
+.public-event-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0;
+  margin: 24px;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 40px;
+
+  @media screen and (max-width: 979px) {
+    padding-top: 80px;
+  }
+
+  @media screen and (max-width: 600px) {
+    padding: 32px 22px 32px 22px;
+    margin: 12px;
+  }
+
+  .image {
+    margin-bottom: 40px;
+    max-width: 720px;
+    max-height: 480px;
+    border-radius: 8px;
+    width: 100%;
+    aspect-ratio: 1.5;
+
+    img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+  }
+
+  .public-event-info-body {
+    display: flex;
+    flex-direction: column;
+
+    .public-event-body-header {
+      display: flex;
+      flex-direction: row;
+
+      @media screen and (max-width: 800px) {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    .title-and-description {
+      flex: 1;
+
+      .public-event-title {
+        font-size: 35px;
+        font-weight: bold;
+        margin: 0 0 20px 0;
+
+        @media screen and (max-width: 800px) {
+          text-align: center;
+        }
+      }
+    }
+
+    .public-event-buttons {
+      flex: 1;
+      margin-top: 5px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+
+      @media screen and (max-width: 800px) {
+        justify-content: center;
+      }
+
+      @media screen and (max-width: 464px) {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .public-event-button {
+        margin: 0 8px 8px 8px;
+        background-color: #7353ff;
+        box-shadow: 4px 7px 12px 0 rgba(97, 93, 250, .2);
+        min-width: 200px;
+        white-space: nowrap;
+        border-radius: 80px;
+        font-size: 16px;
+        transition: all .2s ease-in-out;
+        width: 180px;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.2s;
+        padding: 0 16px;
+
+        &:disabled {
+          background-color: grey;
+          pointer-events: none;
+        }
+
+        &:hover {
+          background-color: $secondary-color-hover;
+        }
+
+
+      }
+    }
+
+    .decorated-feature-list {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      margin-top: 12px;
+  
+      .decorated-feature {
+        margin-top: 18px;
+        margin-right: 24px;
+        @media screen and (max-width: 580px) {
+          width: 100%;
+        }
+      }
+      .decorated-feature-none {
+        display: none;
+      }
+    }
+  
+    .decorated-feature {
+      display: flex;
+      padding-right: 18px;
+  
+      .decorated-feature-icon {
+        margin-top: 2px;
+        fill: $secondary-color;
+        width: 20px;
+        height: 20px;
+      }
+  
+      .decorated-feature-info {
+        margin-left: 12px;
+      }
+  
+      .decorated-feature-title {
+        font-size: 18px;
+        font-weight: 700;
+      }
+  
+      .decorated-feature-text {
+        margin-top: 2px;
+        color: #8f91ac;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: calc(20 / 14) * 1em;
+      }
+    }
+
+    .public-event-subtitle {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 20px 0 10px 0;
+    }
+
+    .public-event-text {
+      font-size: 17px;
+      margin: 0 0 20px 0;
+      line-height: 1.5;
+      white-space: pre-wrap;
+      font-weight: 500;
+    }
+  
+    .facilitator-subtitle {
+      font-size: 17px;
+      font-weight: 500;
+      margin: 8px 0 18px;
+    }
+    .facilitator-skills {
+      display: flex;
+      flex-direction: column;
+      .skill-item {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        margin-bottom: 12px;
+        .skill-bullet {
+          font-size: 17px;
+          line-height: 1.5;
+          font-weight: 500;
+          margin-right: 6px;
+        }
+        .skill-text {
+          flex: 1;
+          font-size: 17px;
+          line-height: 1.5;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  .error-message {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 40px 0;
+  }
+}

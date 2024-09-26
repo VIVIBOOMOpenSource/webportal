@@ -1,0 +1,62 @@
+@import "../../../css/styles/variables";
+@import "../../../css/styles/colors";
+
+.public-member-item {
+  display: flex;
+  padding: 18px;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+  border-radius: 8px;
+  background-color: #fff;
+  &:hover {
+    transform: scale(1.05);
+  }
+  .member-profile-container {
+    position: relative;
+    img {
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+    }
+    .country-flag {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      top: -2px;
+      left: 0;
+      background-color: #fff;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 17px;
+        height: 17px;
+      }
+    }
+  }
+  .name-description {
+    height: 60px;
+    padding-top: 8px;
+    flex: 1;
+    padding: 0 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .name {
+      font-size: 20px;
+      margin-bottom: 0;
+      color: $primary-color;
+    }
+    .description {
+      margin-bottom: 0;
+      font-size: 13px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      font-weight: 400;
+      color: $primary-color;
+    }
+  }
+}

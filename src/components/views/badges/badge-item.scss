@@ -1,0 +1,126 @@
+@import "../../../css/styles/colors";
+@import "../../../css/styles/variables";
+
+.badge-item {
+  display: flex;
+  flex-flow:column;
+  flex-grow: 1;
+  &:hover {
+    text-decoration: none;
+  }
+  .badge-item-sub {
+    margin: 12px;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    position: relative;
+    display: flex;
+    flex-flow:column;
+    flex-grow: 1;
+    transition: all 0.3s ease-out;
+    .badge-checkmark {
+      position: absolute;
+      top: -6px;
+      left: 0;
+      font-size: 29px;
+      visibility: hidden;
+    }
+    .badge-earned {
+      position: absolute;
+      top: 6px;
+      right: 6px;
+    }
+    &:hover {
+      box-shadow: 0px 0px 8px 0px $light-gray-color;
+      transform: scale(1.03);
+    }
+    .badge-image {
+      margin: 20px 20px 8px;
+      display: grid;
+      justify-content: center;
+      .image {
+        height: 90px;
+        width: 90px;
+        border-radius: 10px;
+      }
+    }
+    .badge-details {
+      text-align: center;
+      padding: 0 20px;
+      flex-grow: 1;
+      .name {
+        height: 53px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .text {
+          color: #3e3f5e;
+          font-size: 18px;
+          font-weight: 700;
+        }
+      }
+      .desc {
+        margin: 0 0 20px 0;
+        color: #a2a2a2;
+        font-size: 16px;
+      }
+      .earned-badge {
+        .earned,
+        .not-earned {
+          display: flex;
+          &.hide {
+            display: none;
+          }
+          align-items: center;
+          .image {
+            height: 20px;
+            width: 20px;
+            background-image: url("../../../css/imgs/boom-imgs/quest/completedq-s.png");
+            background-size: 20px;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+          }
+          .text {
+            flex: 1;
+            margin: 0 12px;
+            color: #f4b409;
+            font-weight: 700;
+            font-size: 12px;
+          }
+        }
+        .not-earned {
+          display: none;
+          .image {
+            background-image: url("../../../css/imgs/boom-imgs/quest/exclamation-red.png");
+          }
+          .text {
+            color: rgb(255, 73, 73);
+          }
+        }
+      }
+    }
+    .earned-badge-users {
+      width: 100%;
+      border: 1px solid #eaeaf5;
+      border-width: 1px 0 0 0;
+      padding: 12px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #a2a2a2;
+      .user-list {
+        margin: 0;
+        display: flex;
+        li {
+          width: 18px;
+          .image {
+            background-color: #fff;
+            box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            height: 24px;
+            width: 24px;
+          }
+        }
+      }
+    }
+  }
+}

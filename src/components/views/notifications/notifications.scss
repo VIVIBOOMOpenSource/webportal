@@ -1,0 +1,44 @@
+@import "../../../css/styles/variables";
+@import "../../../css/styles/_colors";
+
+.notifications {
+  max-width: $content-max-width;
+  padding: $content-padding;
+  font-family: $font;
+  margin: auto;
+  @media screen and (max-width: $mobile-width) {
+    padding: 88px 12px 12px;
+  }
+  @media only screen and (max-device-width: 420px) {
+    padding: 46px 5px 5px;
+    font-size: 16px;
+  }
+  .notif-items-section{
+    width: 100%;
+    margin-top: 10px;
+    display: grid;
+    align-items: stretch;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, (33%));
+    @media screen and (max-width: 979px) {
+      grid-template-columns: repeat(auto-fit, 50%);
+    }
+    @media screen and (max-width: 720px) {
+      grid-template-columns: repeat(auto-fit, 100%);
+    }
+    > div {
+      padding: 12px;
+    }
+  }
+  .section-title{
+    font-size: 28px;
+    font-weight: 400;
+    margin: 18px;
+  }
+  .section-text{
+    width: 100%;
+    font-size: 18;
+    font-weight: 400;
+    text-align: center;
+  }
+}

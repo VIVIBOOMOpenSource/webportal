@@ -1,0 +1,75 @@
+@import "../../../css/styles/variables";
+@import "../../../css/styles/_colors";
+
+.more-profile-details{
+    .username-detail{
+        display: flex;
+        justify-content: flex-start;
+        background-color:$background-color;
+        font-family: $font;
+        font-weight: 400;
+    }
+    .email-editor-container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: nowrap;
+        .email-detail{
+            background-color:$background-color;
+            font-family: $font;
+            font-weight: 400;
+            width: 100%;
+        }
+    }
+    .password-editor-container{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: nowrap;
+        .password-detail{
+            background-color:$background-color;
+            font-family: $font;
+            font-weight: 400;
+            width: 100%;
+        }
+    }
+    .edit-button-container{
+        margin-left: 10px;
+        max-width: 40px;
+    }
+    .new-email-input{
+        background-color:#242e671f;
+        font-family: $font;
+        font-weight: 400;
+        margin-left: 10px;
+        border-width: 0px;
+        width: 95%;
+    }
+    .current-password-input{
+        background-color:#242e671f;
+        font-family: $font;
+        font-weight: 400;
+        margin-left: 10px;
+        border-width: 0px;
+        width: 95%;
+    }
+    .new-password-input{
+        background-color:#242e671f;
+        font-family: $font;
+        font-weight: 400;
+        margin-left: 10px;
+        border-width: 0px;
+        width: 95%;
+    }
+    .submit-button-container{
+        margin: 20px auto 0 auto;
+        width: 40%;
+        text-align: center;
+        .submit-button{
+            transition: all 0.2s ease-in-out ;
+            &:hover{
+                
+            }
+        }
+    }
+}

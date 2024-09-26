@@ -1,0 +1,58 @@
+.step-five {
+  margin: 20px 20px 20px 0px;
+  .text {
+    font-family: Rajdhani, sans-serif;
+    .name {
+      color: red;
+    }
+  }
+  .heading {
+    font-size: 36px;
+  }
+  .desc {
+    font-size: 28px;
+  }
+  .subheading {
+    font-size: 24px;
+  }
+  .viviboom-text {
+    font-size: 48px;
+    font-family: Titillium Web, sans-serif;
+    color: #000;
+  }
+
+  .profile-desc {
+      margin-top: 20px;
+    form {
+      label {
+        text-align: left;
+      }
+      textarea {
+        height: auto;
+        width: 70%
+      }
+      button {
+        margin: auto;
+        width: 160px;
+        margin: 16px auto;
+        background-color: rgb(82, 219, 64);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .step-five {
+    margin: 24px 12px 12px 12px;
+
+    .heading {
+      font-size: 28px;
+    }
+    .subheading {
+      font-size: 16px;
+    }
+    .viviboom-text {
+      font-size: 36px;
+    }
+  }
+}

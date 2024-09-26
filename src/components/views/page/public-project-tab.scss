@@ -1,0 +1,102 @@
+@import "../../../css/styles/variables";
+@import "../../../css/styles/colors";
+
+.public-project-tab {
+  font-family: $font;
+  max-width: 1024px;
+  width: 100%;
+  margin: 20px auto;
+  padding: 10px 40px 40px 40px;
+
+  @media screen and (max-width: 720px) {
+    padding: 10px 20px 40px 20px;
+  }
+  @media screen and (max-width: 600px) {
+    padding: 10px 10px 40px 10px;
+  }
+  @media screen and (max-width: 428px) {
+    padding: 10px 4px 40px 4px;
+  }
+  h6 {
+    font-size: 28px;
+    font-weight: 400;
+    margin: 12px;
+    color: $primary-color;
+  }
+  .project-container-sub {
+    flex-grow: 1;
+
+    .project-list {
+      flex-grow: 1;
+      width: 100%;
+      margin: 0;
+      display: grid;
+      align-items: stretch;
+      justify-content: center;
+      grid-template-columns: repeat(auto-fit, (33%));
+      @media screen and (max-width: 979px) {
+        grid-template-columns: repeat(auto-fit, 50%);
+      }
+      
+      li {
+        margin: 20px 0;
+        @media screen and (max-width: 600px) {
+          margin: 10px 0;
+        }
+        .public-project-item-container {
+          margin: 0 10px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          .project-item-image {
+            height: auto;
+            aspect-ratio: 4 / 3;
+          }
+
+          @media screen and (max-width: 600px) {
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            padding: 4px;
+            margin: 0 4px;
+            .project-item-creator-container {
+              margin: 5px 2px;
+            }
+            .project-item-image {
+              padding: 5px 2px 2px 2px;
+              img {
+                border-radius: 12px;
+              }
+            }
+            .project-item-creator-image, .project-item-country-image {
+              width: 36px;
+              height: 36px;
+            }
+            .project-item-creator-name, .project-item-title, .project-item-desc {
+              font-size: 14px;
+            }
+            .project-item-title {
+              padding: 2px 0 5px 0;
+            }
+            .project-item-details {
+              margin: 2px 2px 7px 2px;
+            }
+          }
+        }
+      }
+    }
+
+    .projects-main-footer {
+      text-align: center;
+      h3 {
+        margin-top: 12px;
+      }
+      .pagination {
+        justify-content: center;
+      }
+    }
+
+    .loading-container {
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

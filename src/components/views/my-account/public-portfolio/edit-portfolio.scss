@@ -1,0 +1,311 @@
+@import "../../../../css/styles/colors";
+@import "../../../../css/styles/variables";
+
+.edit-portfolio {
+
+  font-family: $font;
+  .body {
+    margin: 20px auto;
+    padding: 10px 40px 40px 40px;
+    @media screen and (max-width: 428px) {
+      padding: 10px 20px 40px 20px;
+    }
+  }
+  .separator-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width:100%;
+    background-color: #fff;
+    border-top: 2px solid #e2eef1;
+    border-bottom: 1px solid #e2eef1;
+    @media screen and (max-width: 500px) {
+      justify-content: center;
+    }
+    .button {
+      background-color: $secondary-color;
+      box-shadow: 4px 7px 12px 0 rgba(97, 93, 250, 0.2);
+      width: 15%;
+      min-width: 200px;
+      margin: 12px 50px;
+      white-space: nowrap;
+      border-radius: 80px;
+      font-size: 14px;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        box-shadow: 0px 0px 8px 0px $light-gray-color;
+        transform: scale(1.03);
+      }
+    }
+  }
+  .selected-projects {
+    margin-top: 30px;
+    .save-button-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .save-button {
+      background-color: $secondary-color;
+      padding: 10px 30px;
+      color: white;
+      border: 1px solid $secondary-color;
+      font-family: $font;
+      font-size: 15px;
+      border-radius: 80px;
+      font-weight: 500;
+      cursor: pointer;
+      &:hover{
+        background-color: $secondary-color-hover;
+      }
+    }
+    .section-title {
+      color: #183b56;
+      font-weight: 500;
+      font-size: 28px;
+      // margin-bottom: 24px;
+      align-items: center;
+      display: flex;
+      &.selected {
+        margin-bottom: 10px;
+      }
+    }
+    .section-subtext {
+      color: #183b56;
+      font-weight: 400;
+      margin-bottom: 24px;
+      
+    }
+    .member-projects {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 20px;
+      overflow: auto;
+      @media screen and (max-width: 428px) {
+        padding: 10px 0;
+      }
+      .no-projects {
+        @media screen and (max-width: 428px) {
+          text-align: center;
+        }
+      }
+    }
+  }
+  .view-portfolio {
+    background-color: $secondary-color;
+    padding: 5px 10px;
+    color: white;
+    border: 1px solid $secondary-color;
+    border-radius: 10px;
+    text-decoration: none;
+  }
+  .edit-portfolio-header-container{
+    width:100%;
+    height: 250px;
+    background-color: #fff;
+    .edit-portfolio-header-title-container{
+      max-width: $content-max-width;
+      padding: 40px 0 0 50px;
+      color: $primary-color;
+      @media screen and (max-width: 428px) {
+        padding: 40px 20px 0 30px;
+      }
+      .edit-portfolio-title{
+        margin-top: 50px;
+        font-size: 48px;
+        font-weight: 700;
+      }
+      .title-description {
+        font-weight: 400;
+      }
+    }
+  }
+  .project-list {
+    // code below is to solve the problem of the element going out of the div when dragging
+    display: flex;
+    &.unselected {
+      flex-grow: 1;
+      width: 100%;
+      margin: 0;
+      display: grid;
+      align-items: stretch;
+      justify-content: center;
+      grid-template-columns: repeat(auto-fit, (33%));
+      @media screen and (max-width: 979px) {
+        grid-template-columns: repeat(auto-fit, 50%);
+      }
+      @media screen and (max-width: 720px) {
+        grid-template-columns: repeat(auto-fit, 100%);
+      }
+      .selected-text {
+        color: green;
+      }
+    }
+    li {
+      margin: 0;
+      height: 100%;
+      display: flex;
+      flex-flow: column;
+    }
+  }
+    .project-item-container {
+        background: #fff;
+        border: solid 2px #ecf1f9;
+        padding: 20px;
+        border-radius: 20px;
+        // box-shadow: 0px 0px 8px 0px $box-shadow-color;
+        transition: all 0.3s ease-out;
+        margin: 20px;
+        box-shadow: 8px 8px #ecf1f9;
+        height: 100%;
+        &.selected {
+          width:300px;
+        }
+        &.is-selected {
+          pointer-events: none;
+        }
+        &:hover {
+          box-shadow: 0px 0px 8px 0px #ecf1f9;
+          transform: scale(1.03);
+          .project-item-image {
+            transform: scale(1.03);
+          }
+        }
+        .project-item-image {
+          height: 200px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 10px 5px 5px 5px;
+          transition: all 0.3s ease-out;
+          .image {
+            // width: 100%;
+            // height: 100%;
+            border-radius: 25px;
+            object-fit: cover;
+            max-width: 100%;
+            max-height: 100%;
+          }
+        }
+        .project-item-details {
+          text-align: left;
+          margin: 5px 5px 15px 5px;
+          .project-item-title {
+            padding: 5px 0 10px 0;
+            margin: 0;
+            line-height: 1.5;
+            font-size: auto;
+            font-weight: bold;
+            color: $primary-color;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden
+          }
+          .no-project-item-desc{
+            height: 22px;
+          }
+          .project-item-desc {
+            color: #a2a2a2;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+          }
+        }
+        .project-button {
+          background-color: $secondary-color;
+          padding: 5px 10px;
+          color: white;
+          border: 1px solid $secondary-color;
+          font-family: $font;
+          font-size: 15px;
+          cursor: pointer;
+          &.remove {
+            background-color: red;
+            border: 1px solid red;
+          }
+        }
+    }
+    .title-and-button {
+      display: flex;
+      margin-bottom: 24px;
+      @media screen and (max-width: 428px) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .search-bar-container {
+      height: 70px;
+      max-width: 350px;
+      width: 80%;
+      display: flex;
+      overflow: hidden;
+      margin-left: auto;
+      @media screen and (max-width: 428px) {
+        margin-left: 0;
+      }
+      .search-bar {
+        position: relative;
+        margin: 15px auto;
+        width: 80%;
+        label {
+          font-size: 10px;
+          font-weight: 400;
+          margin: auto;
+        }
+        input {
+          font-family: $font;
+          font-weight: 400;
+          height: 100%;
+          margin: 0;
+          color:#aaabb7;
+        }
+        ::-webkit-input-placeholder {
+          font-weight: 500;
+          font-size: 13px;
+        }
+        &:focus-within,
+        &.active {
+          label {
+            font-family: $font;
+            background-color: #fff;
+            padding: 0 6px;
+            font-size: 10px;
+            top: -6px;
+            left: 12px;
+          }
+        }
+
+      }
+      .search-button {
+        border: 0;
+        cursor: pointer;
+        background-color: $secondary-color;
+        border-radius: 80px;
+        width: fit-content;
+        height: 38px;
+        width: 38px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: $font;
+        margin: auto 0 auto 0;
+        transition: all 0.2s ease-in-out;
+        @media screen and (max-width: 650px){
+          margin-top: 18px;
+          margin-left: 5px; 
+          height: 32px;
+          width: 32px;
+        }
+        &:hover{
+          background-color: $secondary-color-hover;
+        }
+        .icon-search {
+          fill: #fff;
+          width: 13px;
+          height: 13px;
+        }
+        
+      }
+    }
+}

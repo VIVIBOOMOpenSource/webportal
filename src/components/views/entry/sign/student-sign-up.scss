@@ -1,0 +1,209 @@
+@import '../../../../css/styles/colors';
+@import '../../../../css/styles/variables';
+
+.student-signup {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  .back-button {
+    height: 48px;
+    width: 48px;
+    top: 10px;
+    left: 10px;
+    position: absolute;
+    border-radius: 2px;
+    padding: 8px;
+    cursor: pointer;
+    svg{
+      height: 100%;
+      width: 100%;
+      .real-path{
+        fill: #fff;
+      }
+    }
+    z-index: 150;
+    &:hover{
+      box-shadow: inset 0px 0px 250px 0px rgba(255,255,255,.1);
+    }
+    &:active{
+      box-shadow: inset 0px 0px 250px 0px rgba(255,255,255,.2);
+    }
+  }
+  .student-signup-info {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-align: center;
+    padding: 48px 64px;
+    margin: 36px 0;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 0 60px 0 rgba(94,92,154,.12);
+    max-width: 500px;
+    width: 100%;
+    
+    @media screen and (max-width: 504px) {
+      border-radius: 0;
+      padding: 48px 18px;
+    }
+    .logo-image {
+      user-select: none;
+      -webkit-user-select: none;
+      -webkit-user-drag: none;
+      width: 100%;
+      max-width: 318px;
+    }
+    .student-signup-info-text{
+      color: $primary-color;
+      font-size: 18px;
+      font-weight: 500;
+      margin: 24px 0;
+    }
+    .digits {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .digit {
+        flex: 1;
+        margin: 4px;
+        height: 60px;
+        max-width: 52px;
+        border-radius: 8px;
+        background-color: rgba(128, 128, 128, 0.1);
+        text-align: center;
+        border: 0;
+        font-size: 24px;
+        font-weight: 700;
+        color: $primary-color;
+        &:focus {
+          outline: none !important;
+          border: 2px solid $secondary-color-hover;;
+        }
+      }
+    }
+    .err-message {
+      text-align: left;
+      margin: 12px 4px 0 4px;
+      color: #ff3333;
+    }
+    .next-button {
+      margin-top: 36px;
+      width: 160px;
+      button {
+        font-size: 18px;
+      }
+    }
+  }
+  .student-signup-form {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-align: center;
+    padding: 36px 64px;
+    margin: 36px 0;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 0 60px 0 rgba(94,92,154,.12);
+    max-width: 504px;
+    width: 100%;
+    @media screen and (max-width: 504px) {
+      border-radius: 0;
+      padding: 18px;
+    }
+    .logo-image {
+      user-select: none;
+      -webkit-user-select: none;
+      -webkit-user-drag: none;
+      width: 100%;
+      max-width: 318px;
+    }
+    .student-signup-info-text{
+      color: $primary-color;
+      font-size: 18px;
+      font-weight: 500;
+      margin: 24px 0;
+    }
+    .signup-form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .form-input {
+        width: 100%;
+        input {
+          margin: 0 0 18px 0;
+        }
+      }
+      .signup-name {
+        display: flex;
+        flex-direction: row;
+        .form-input {
+          flex: 1;
+        }
+        :first-child {
+          margin-right: 18px;
+        }
+      }
+    }
+    .next-button {
+      margin-top: 12px;
+      width: 160px;
+      button {
+        font-size: 18px;
+      }
+    }
+    .sign-in{
+      display: block;
+      margin: 18px 0 0 0;
+      font-size: 17px;
+      &:hover {
+        color: rgba(24, 59, 86, 0.7);
+        text-decoration: none;
+      }
+    }
+  }
+  .success-page {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-align: center;
+    padding: 36px 64px;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 0 60px 0 rgba(94,92,154,.12);
+    width: 100%;
+    max-width: 1024px;
+    .logo-image {
+      user-select: none;
+      -webkit-user-select: none;
+      -webkit-user-drag: none;
+      width: 100%;
+      max-width: 318px;
+    }
+    .success-note {
+      margin: 24px;
+      font-size: 18px;
+      color: black;
+      font-weight: 600;
+      max-width: 800px;
+      text-align: center;
+    }
+    .welcome-video {
+      width: 100%;
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      iframe {
+        width: 100%;
+        min-width: 300px;
+        min-height: 300px;
+        aspect-ratio: calc(16 / 9);
+        border-radius: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,171 @@
+@import "../../../css/styles/colors";
+@import "../../../css/styles/variables";
+
+.project-item {
+  padding: 12px;
+  font-family: $font;
+  width: 100%;
+  max-width: 30rem;
+  a {
+    text-decoration: none;
+    display: flex;
+    flex-flow: column;
+  }
+  .project-item-creator-container {
+    display: flex;
+    align-items: center;
+    margin: 10px 5px;
+    .project-item-creators {
+      position: relative;
+      width: 50px;
+      height: 50px;
+      :first-child {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 35px;
+        height: 35px;
+        border: 2px solid #fff;
+        border-radius: 50%;
+      }
+      :last-child {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 35px;
+        height: 35px;
+        border: 2px solid #fff;
+        border-radius: 50%;
+      }
+    }
+    .project-item-creator-image{
+      width: 50px;
+      height: 50px;
+      .image {
+        border-radius: 50%;
+        width: 100%;
+        height: 100%
+      }
+    }
+    .project-item-creator-name{
+      width: fit-content;
+      padding: 0 0 7px 8px;
+      color: #adafca;
+      transition: 0.3s ease-in-out;
+      &:hover{
+        color: $secondary-color;
+      }
+      .author-names {
+        margin: 0;
+        span {
+          font-weight: 400;
+        }
+      }
+    }
+  }
+  
+  .project-item-container {
+    background: #fff;
+    border: solid 1px #e2eef1;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 8px 0px $box-shadow-color;
+    transition: all 0.3s ease-out;
+    &:hover {
+      box-shadow: 0px 0px 8px 0px $light-gray-color;
+      transform: scale(1.03);
+      .project-item-image {
+        transform: scale(1.03);
+      }
+    }
+    .project-item-image {
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 5px 5px 5px;
+      transition: all 0.3s ease-out;
+      .image {
+        width: 100%;
+        height: 100%;
+        border-radius: 25px;
+        object-fit: cover;
+      }
+    }
+    .project-item-details {
+      text-align: left;
+      margin: 5px 5px 15px 5px;
+      .project-item-title {
+        padding: 5px 0 10px 0;
+        margin: 0;
+        line-height: 1.5;
+        font-size: auto;
+        font-weight: bold;
+        color: $primary-color;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden
+      }
+      .no-project-item-desc{
+        height: 22px;
+      }
+      .project-item-desc {
+        color: #a2a2a2;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+    }
+    .project-item-footer {
+      border: 1px solid #eaeaf5;
+      border-width: 1px 0 0 0;
+      display: flex;
+      padding: 12px 12px 5px 0;
+      justify-content: space-between;
+      .project-item-badge{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        .badge-count {
+          margin: 0 10px;
+          font-weight: 400;
+          font-size: smaller;
+          color: gray;
+        }
+      }
+      .like-button {
+        height: 30px;
+        align-items: center;
+        position: relative;
+        display: flex;
+        margin: auto 0 auto 0;
+        padding: 2px 10px 0 10px;
+        border-radius: 20px;
+        border: 0.8px solid $light-gray-color;
+        transition: all 0.3s ease-in-out;
+        .like-text{
+          padding: 8px 0 0 5px;
+          color: $primary-color;
+          font-size: 16px;
+          white-space: nowrap;
+        }
+        &:hover {
+          transform: scale(1.03);
+          .like-text{
+            transform: scale(1.03);
+          }
+          .heart-button{
+            transform: scale(1.03);
+          }
+        }
+        &.active {
+          border: 0;
+          background-color: rgb(248,48,95);
+          .like-text{
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}

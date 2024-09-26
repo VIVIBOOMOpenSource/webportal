@@ -1,0 +1,68 @@
+@import "./colors";
+@import "./variables";
+
+@import "./buttons";
+@import "./input";
+@import "./text";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+}
+html {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: Rajdhani, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $background-color;
+  max-width: 100%;
+  min-width: 280px;
+  overflow-x: hidden;
+  overflow-wrap: anywhere;
+}
+body {
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+#root {
+  position: relative;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: $mobile-width) {
+  .app {
+    flex-direction: column;
+  }
+}
+
+#content-container {
+}
+#content {
+  position: relative;
+  flex: 1 1 auto;
+  // padding: 0px 40px 40px;
+  min-height: 100vh;
+}
+
+// @media screen and (max-width: $mobile-width) {
+//   #content {
+//     padding: 48+0px 20px 20px;
+//   }
+// }
+
+// @media screen and (min-width: $desktop-width) {
+//   #content {
+//     // overflow: hidden;
+//     padding: 0px 40px 40px;
+//   }
+// }

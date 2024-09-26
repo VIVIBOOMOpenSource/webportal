@@ -1,0 +1,120 @@
+.rdw-scratch-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+  position: relative;
+  flex-wrap: wrap;
+}
+.rdw-scratch-modal {
+  position: absolute;
+  top: 35px;
+  left: 5px;
+  display: flex;
+  flex-direction: column;
+  width: 235px;
+  height: 180px;
+  border: 1px solid #f1f1f1;
+  padding: 15px;
+  border-radius: 2px;
+  z-index: 100;
+  background: white;
+  justify-content: space-between;
+  box-shadow: 3px 3px 5px #bfbdbd;
+
+  &.hide {
+    display: none;
+  }
+}
+.rdw-scratch-wrapper {
+  img {
+    content: url("../../../../css/imgs/icon-scratch.png");
+    width: 20px;
+  }
+}
+.rdw-scratch-modal-header span {
+  display: none;
+}
+.rdw-scratch-modal-header {
+  font-size: 15px;
+  display: flex;
+}
+.rdw-scratch-modal-header:after {
+  content: "Scratch Project Link";
+}
+.rdw-scratch-modal-header-option {
+  width: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.rdw-scratch-modal-header-label {
+  width: 95px;
+  border: 1px solid #f1f1f1;
+  margin-top: 5px;
+  background: #6eb8d4;
+  border-bottom: 2px solid #0a66b7;
+}
+.rdw-scratch-modal-link-section {
+  display: flex;
+  flex-direction: column;
+}
+.rdw-scratch-modal-link-input {
+  width: 88%;
+  height: 35px;
+  margin: 10px 0;
+  border: 1px solid #f1f1f1;
+  border-radius: 2px;
+  font-size: 15px;
+  padding: 0 5px;
+}
+.rdw-scratch-modal-link-input-wrapper {
+  display: flex;
+  align-items: center;
+}
+.rdw-scratch-modal-link-input:focus {
+  outline: none;
+}
+.rdw-scratch-modal-btn-section {
+  display: flex;
+  justify-content: center;
+}
+.rdw-scratch-modal-btn {
+  margin: 0 3px;
+  width: 75px;
+  height: 30px;
+  border: 1px solid #f1f1f1;
+  border-radius: 2px;
+  cursor: pointer;
+  background: white;
+  text-transform: capitalize;
+}
+.rdw-scratch-modal-btn:hover {
+  box-shadow: 1px 1px 0px #bfbdbd;
+}
+.rdw-scratch-modal-btn:active {
+  box-shadow: 1px 1px 0px #bfbdbd inset;
+}
+.rdw-scratch-modal-btn:focus {
+  outline: none !important;
+}
+.rdw-scratch-modal-btn:disabled {
+  background: #ece9e9;
+}
+.rdw-scratch-modal-size {
+  align-items: center;
+  display: flex;
+  margin: 8px 0;
+  justify-content: space-between;
+}
+.rdw-scratch-modal-size-input {
+  width: 80%;
+  height: 20px;
+  border: 1px solid #f1f1f1;
+  border-radius: 2px;
+  font-size: 12px;
+}
+.rdw-scratch-modal-size-input:focus {
+  outline: none;
+}

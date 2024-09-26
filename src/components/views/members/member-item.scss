@@ -1,0 +1,130 @@
+@import "../../../css/styles/colors";
+@import "../../../css/styles/variables";
+
+.member-item {
+  position: relative;
+  max-width: 330px;
+  height: 275px;
+  overflow: hidden;
+  padding: 80px 10px 0 7px;
+  justify-content: space-between;
+  margin: 20px;
+  border-radius: 15px;
+  background-color: #fff;
+  font-family: $font;
+  transition: all 0.3s ease-out;
+  @media screen and (width: 1024px) {
+    width: 280px;
+  }
+  a:hover{
+    text-decoration: none;
+  }
+  &:hover {
+    box-shadow: 0px 0px 8px 0px $light-gray-color;
+    transform: scale(1.01);
+    .member-item-detail {
+      .member-item-profile-image-container {
+        transform: scale(1.05);
+      }
+    }
+  }
+  .member-item-cover-image {
+    box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    position: absolute;
+    top: 10px;
+    width: 96%;
+    height: 120px;
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  .member-item-detail {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    .member-item-profile-image-container {
+      transition: all 0.3s ease-out;
+      position: relative;
+      .member-item-profile-image {
+        width: 80px;
+        height: 80px;
+        overflow: hidden;
+        border-radius: 50%;
+        border: #fff 3px solid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          max-width: 100%;
+        }
+      }
+      .member-item-profile-country {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        left:0;
+        top:0;
+        z-index:2;
+        border-radius:50%;
+        &.status {
+          top: 25%;
+        }
+      }
+    }
+    .member-name {
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+  .project-badges-container{
+    background-color: #e6edf0;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 98%;
+    height: 30%;
+    margin: 10px auto;
+    
+    .text-container{
+      margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .text-number{
+        margin:auto;
+        font-size: 18px;
+      }
+      .text-badges-projects{
+        font-size: 12px;
+      }
+    }
+  }
+  .member-item-link{
+    box-shadow: 4px 7px 12px 0 rgba(0, 0, 0, 0.10);
+    border-radius: 80px;
+    text-align: center;
+    font-weight: 400;
+    color: #fff;
+    padding: 10px;
+    background-color: $secondary-color;
+    font-size: 12px;
+    align-self: center;
+    transition: all 0.2s ease-in-out;
+    &:hover{
+      background-color: $secondary-color-hover;
+      transform: scale(1.05);
+    }
+  }
+}

@@ -1,0 +1,61 @@
+.str-chat-channel-list {
+  height: fit-content;
+  margin-bottom: 16px;
+  border: 0;
+  overflow: hidden;
+}
+
+.str-chat__load-more-button {
+  display: none;
+}
+
+.team-channel-list {
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+  padding: 0 6px;
+  width: 100%;
+  .str-chat__channel-list-empty-v1 {
+    display: none;
+  }
+
+  .str-chat__channel-list-empty {
+    padding: 12px;
+    line-height: 18px;
+  }
+
+  .str-chat__avatar-fallback {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), var(--primary-color)
+  }
+
+  .team-channel-list__message {
+    padding: 0 16px;
+  }
+
+  .team-channel-list__message.loading {
+    height: 115px;
+  }
+
+  .team-channel-list__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    margin: 10px 0;
+
+    .team-channel-list__header__title {
+      height: 16px;
+      margin-bottom: 0;
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      padding-block: 4px;
+    }
+  }
+}
+
+.team-channel-list::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}

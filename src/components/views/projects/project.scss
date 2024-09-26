@@ -1,0 +1,258 @@
+@import "../../../css/styles/variables";
+.project {
+  margin: 0 auto;
+  max-width: $content-max-width;
+  padding: $content-padding;
+  @media screen and (max-width: $mobile-width) {
+    padding: 88px 12px 12px;
+  }
+  @media only screen and (max-device-width: 420px) {
+    padding: 46px 12px 12px;
+    font-size: 16px;
+  }
+  .project-contain {
+    display: flex;
+    .project-main {
+      flex: 1;
+      width: 80%;
+      .project-image {
+        padding: 20px;
+        border-radius: 12px;
+        margin: 0 0 20px 0;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 480px;
+        overflow: hidden;
+        img {
+          max-height: 100%;
+          max-width: 100%;
+          box-shadow: 0px 3px 8px 0px rgbA(0, 0, 0, 0.1);
+        }
+      }
+      .project-images {
+        padding: 12px;
+        border-radius: 12px;
+        margin: 20px 0;
+        background-color: #fff;
+        > ul {
+          margin: 0;
+          display: flex;
+          > li {
+            margin: 8px;
+            width: 72px;
+            height: 72px;
+            overflow: hidden;
+            border-radius: 12px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 3px 8px 0px rgbA(0, 0, 0, 0.1);
+            img {
+              max-width: 100%;
+            }
+            &.active {
+              border: 3px solid red;
+            }
+          }
+        }
+      }
+      .project-detail {
+        margin: 0 0 20px;
+        border-radius: 12px;
+        overflow: hidden;
+        .detail-select {
+          display: flex;
+          > div {
+            flex: 1;
+            text-align: center;
+            padding: 20px 0;
+            cursor: pointer;
+            background-color: rgba(245, 245, 245, 1);
+            color: #999;
+            &.active {
+              background-color: #fff;
+              color: #333;
+            }
+          }
+        }
+        .desc-detail,
+        .comments-detail {
+          padding: 20px;
+          background-color: #fff;
+          .project-header {
+            h4 {
+              margin-top: 48px;
+              font-size: 1.375rem;
+              font-weight: 700;
+            }
+            .likes {
+              margin-top: 10px;
+              font-size: 14px;
+              display: flex;
+              .likes-count {
+                margin: auto 5px;
+                // margin-left: 5px;
+                // margin-top: 5px;
+              }
+            }
+          }
+          .add-comment {
+            textarea {
+              height: auto;
+            }
+            .add-comment-button {
+              display: flex;
+              justify-content: flex-end;
+              .button-element {
+                border-radius: 12px;
+                input {
+                  padding-right: 40px;
+                  font-weight: 700;
+                  background-color: #23d2e2;
+                }
+                .button-status-image {
+                  z-index: 100;
+                }
+              }
+            }
+          }
+        }
+        .desc-detail {
+          .like-button {
+            max-width: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            button {
+              padding: 0;
+              svg {
+                .real-path {
+                  fill: #fff;
+                }
+              }
+            }
+            &.active {
+              .background {
+                background-color: #23d2e2;
+              }
+            }
+          }
+          .project-desc-html {
+            margin-top: 28px;
+            font-size: 0.875rem;
+            line-height: 1.7142857143em;
+            font-weight: 500;
+          }
+          .project-files {
+            h4 {
+              margin: 20px 0 4px;
+              font-size: 24px;
+              font-weight: 900;
+            }
+            > ul {
+              margin: 0;
+              > li {
+                margin: 0;
+                a {
+                  display: block;
+                }
+              }
+            }
+          }
+          .project-header {
+            .text {
+              margin-top: 48px;
+              font-size: 1.375rem;
+              font-weight: 700;
+            }
+          }
+        }
+        &.desc .comments-detail {
+          display: none;
+        }
+        &.comment .desc-detail {
+          display: none;
+        }
+      }
+      .project-earnable-badges,
+      .other-projects {
+        h4 {
+          font-size: 1.625rem;
+          font-weight: 700;
+        }
+        .badge-list {
+          margin: 0;
+          display: grid;
+          align-items: stretch;
+          justify-content: center;
+          grid-template-columns: repeat(auto-fit, (33%));
+          @media screen and (max-width: 979px) {
+            grid-template-columns: repeat(auto-fit, 50%);
+          }
+          @media screen and (max-width: 630px) {
+            grid-template-columns: repeat(auto-fit, 100%);
+          }
+          > li {
+            margin: 0;
+            display: flex;
+            flex-flow: column;
+            flex-grow: 1;
+          }
+        }
+      }
+    }
+    .project-user-profile {
+      max-width: 280px;
+      margin: 0 0 0 20px;
+      .member-item {
+        margin: 0;
+      }
+      .edit {
+        margin: 0 0 20px;
+        line-height: 52px;
+        height: 52px;
+        background-color: #23d2e2;
+        border-radius: 12px;
+        font-weight: 700;
+      }
+      .chat-wrapper {
+        margin: 20px 0;
+      }
+    }
+  }
+  .banner {
+    &.hide-in-app {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 979px) {
+  .project-contain {
+    flex-flow: column;
+  }
+  .project-main {
+    width: 100% !important;
+  }
+  .project .project-contain .project-user-profile {
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+  }
+}
+.rdw-embedded-wrapper {
+  img {
+    content: url("../../../css/imgs/youtube-icon.png");
+    width: 17px;
+  }
+}
+.rdw-embedded-modal-header span {
+  display: none;
+}
+
+.rdw-embedded-modal-header:after {
+  content: "Youtube Video Link";
+}

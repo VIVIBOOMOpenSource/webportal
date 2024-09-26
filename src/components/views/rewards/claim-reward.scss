@@ -1,0 +1,174 @@
+@import "../../../css/styles/variables";
+@import "../../../css/styles/colors";
+
+
+$navi-height: 75px;
+$navi-width: 260px;
+
+.claim-reward {
+  .claim-reward-background{
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-image: url('../../../css/imgs/reward-background.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 0;
+  }
+  .reward-claim-content{
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    overflow: auto;
+    .reward-claim-main {
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-self: center;
+      width: 60%;
+      .wallet-link-container{
+        display: flex;
+        flex-direction: row;
+        color: $secondary-color;
+        background-color: #e2eef1a1;
+        text-decoration: none;
+        width: fit-content;
+        padding: 3px 8px 3px 0;
+        border-radius: 5px; 
+        margin-bottom: 5px;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          background-color: #f3f3f3a9;
+          color: $secondary-color-hover
+        }
+        .wallet-link-icon {
+          width: 24px;
+          height: 24px;
+        }
+      }
+      .reward-claim-info{
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        .reward-info-container{
+          .rewards-title{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            font-weight: bold;
+            border-bottom: 2px solid #e2eef1;
+          }
+          .rewards-successful-title{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: $secondary-color;
+            font-size: 40px;
+            font-weight: bold;
+            @media screen and (max-width: 650px) {
+              font-size: 35px;
+            }
+            @media screen and (max-width: 600px) {
+              font-size: 28px;
+            }
+          }
+          .rewards-successful-subtitle{
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              font-size: 20px;
+              color: #000;
+              @media screen and (max-width: 650px) {
+                font-size: 18px;
+              }
+              @media screen and (max-width: 600px) {
+                font-size: 15px;
+              }
+          }
+          .rewards-successful-text-container{
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+          }
+          .rewards-successful-text{
+              font-size: 20px;
+              @media screen and (max-width: 600px) {
+                font-size: 12px;
+              }
+          }
+          .reward-text-container{
+              border-radius: 10px;
+              padding: 50px 0 20px 0;
+              text-align: center;
+              .rewards-subtitle{
+                font-size: 25px;
+              }
+              .rewards-text{
+                  font-size: 15px;
+              }
+          }
+        }
+        .reward-code-container {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          border-radius: 10px;
+          padding: 10px;
+          text-align: center;
+          .reward-code-container{
+            margin: 0 15px;
+          }
+          .reward-code-input{
+              background-color: #e2eef1;
+              display: flex;
+              justify-content: center;
+              text-align: center;
+          }
+          ::-webkit-input-placeholder {
+              text-align: center;
+              color: $primary-color
+              
+          }
+          input:focus::placeholder {
+              color: transparent;
+          }
+        }
+        .separator-container{
+          display: flex;
+          justify-content: center;
+          @media screen and (max-width: 500px) {
+            justify-content: center;
+          }
+          .button {
+            background-color: $secondary-color;
+            box-shadow: 4px 7px 12px 0 rgba(97, 93, 250, 0.2);
+            width: 15%;
+            min-width: 150px;
+            margin: 20px 50px;
+            white-space: nowrap;
+            border-radius: 80px;
+            font-size: 15px;
+            transition: all 0.2s ease-in-out;
+            &:hover {
+              box-shadow: 0px 0px 8px 0px $light-gray-color;
+              transform: scale(1.03);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+

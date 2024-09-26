@@ -1,0 +1,99 @@
+@import "../../../css/styles/variables";
+@import "../../../css/styles/colors";
+
+.public-challenge-tab {
+  font-family: $font;
+  max-width: 1024px;
+  width: 100%;
+  margin: 20px auto;
+  padding: 10px 40px 40px 40px;
+  @media screen and (max-width: 428px) {
+    padding: 10px 20px 40px 20px;
+  }
+  .home-content {
+    h6 {
+      font-size: 28px;
+      font-weight: 400;
+      margin: 12px;
+      color: $primary-color;
+    }
+    .challenges-div {
+      min-height: 585px;
+      .challenges-div-header {
+        margin: 12px 0;
+      }
+      .challenges-div-content {
+        position: relative;
+        .challenges-shown {
+          padding: 0;
+          flex: 1;
+          margin: 20px 0;
+          .challenge-list {
+            margin: 0;
+            overflow-y: hidden!important;
+            display: grid;
+            align-items: stretch;
+            justify-content: center;
+            grid-template-columns: repeat(auto-fit, (25%));
+            @media screen and (max-width: 720px) {
+              grid-template-columns: repeat(auto-fit, 50%);
+            }
+            @media screen and (max-width: 480px) {
+              grid-template-columns: repeat(auto-fit, 100%);
+            }
+            > div {
+              margin: 0;
+              height: 100%;
+            }
+            a {
+              display: flex;
+              flex-flow: column;
+              flex-grow: 1;
+              height: 100%;
+              .challenge-item, .challenge-item-sub {
+                height: 95%;
+                display: flex;
+                flex-flow: column;
+                flex-grow: 1;
+                .challenge-details {
+                  display: flex;
+                  flex-flow: column;
+                  flex-grow: 1;
+                  .desc {
+                    flex-grow: 1;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .randomizer-ctn {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 390px; // two rows covered
+          position: absolute;
+          top: 390px;
+          left: 0;
+          right: 0;
+          background-color: $background-color;
+          @media screen and (max-width: 630px) {
+            height: 585px; // three rows covered
+            grid-template-columns: repeat(auto-fit, 100%);
+          }
+        }
+        .challenges-main-footer {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .end-message {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+}

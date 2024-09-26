@@ -1,0 +1,135 @@
+@import '../../../css/styles/colors';
+@import '../../../css/styles/variables';
+
+.welcome-signup{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(30,30,30,1);
+  width: 100%;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+  ::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+  }
+
+  .welcome-signup-background{
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    background-image: url('../../../css/imgs/boom-imgs/welcome/background2.jpg');
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+  }
+  .welcome-signup-language{
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    z-index: 100;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    height: 32px;
+    .icon{
+      height: 100%;
+      width: 32px;
+      padding: 4px;
+      position: relative;
+      svg{
+        height: 100%;
+        width: 100%;
+        .real-path{
+          fill: #FFF;
+        }
+      }
+    }
+    .text{
+      margin: 0 4px;
+      line-height: 32px;
+      color: #FFF;
+    }
+    &:hover{
+      transition: all 0.3s;
+      background-color: #FFF;
+      .icon svg .real-path{
+        fill: $primary-color;
+      }
+      .text{
+        color: $primary-color;
+      }
+    }
+  }
+  .welcome-signup-branches{
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    z-index: 100;
+    cursor: pointer; 
+    border-radius: 5px;
+    display: flex;
+    height: 32px;
+    .icon{
+      height: 100%;
+      width: 32px;
+      padding: 4px;
+      position: relative;
+      svg{
+        height: 100%;
+        width: 100%;
+        .real-path{
+          fill: #FFF;
+        }
+      }
+    }
+    .text{
+      margin: 0 4px;
+      line-height: 32px;
+      color: #FFF;
+    }
+    &:hover{
+      transition: all 0.3s;
+      background-color: #FFF;
+      .icon svg .real-path{
+        fill: $primary-color;
+      }
+      .text{
+        color: $primary-color;
+      }
+    }
+  }
+
+  .back-button {
+    top: 4px;
+    left: 4px;
+    position: absolute;
+    border-radius: 2px;
+    padding: 6px;
+    cursor: pointer;
+    z-index: 150;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    svg{
+      height: 24px;
+      width: 24px;
+      .real-path{
+        fill: #fff;
+      }
+    }
+    .back-text {
+      font-size: 20px;
+      color: #fff;
+      margin: 0 12px;
+    }
+    &:hover{
+      box-shadow: inset 0px 0px 250px 0px rgba(255,255,255,.1);
+    }
+    &:active{
+      box-shadow: inset 0px 0px 250px 0px rgba(255,255,255,.2);
+    }
+  }
+}

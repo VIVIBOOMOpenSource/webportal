@@ -1,0 +1,104 @@
+@import '../../../css/styles/colors';
+@import '../../../css/styles/variables';
+
+.member-signup-container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(30,30,30,1);
+  width: 100%;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+  ::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+  }
+
+  .member-signup-background{
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    background-image: url('../../../css/imgs/boom-imgs/welcome/background2.jpg');
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+  }
+  .member-signup-language{
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    z-index: 100;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    height: 32px;
+    .icon{
+      height: 100%;
+      width: 32px;
+      padding: 4px;
+      position: relative;
+      svg{
+        height: 100%;
+        width: 100%;
+        .real-path{
+          fill: #FFF;
+        }
+      }
+    }
+    .text{
+      margin: 0 4px;
+      line-height: 32px;
+      color: #FFF;
+    }
+    &:hover{
+      transition: all 0.3s;
+      background-color: #FFF;
+      .icon svg .real-path{
+        fill: $primary-color;
+      }
+      .text{
+        color: $primary-color;
+      }
+    }
+  }
+  .member-signup-branches{
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    z-index: 100;
+    cursor: pointer; 
+    border-radius: 5px;
+    display: flex;
+    height: 32px;
+    .icon{
+      height: 100%;
+      width: 32px;
+      padding: 4px;
+      position: relative;
+      svg{
+        height: 100%;
+        width: 100%;
+        .real-path{
+          fill: #FFF;
+        }
+      }
+    }
+    .text{
+      margin: 0 4px;
+      line-height: 32px;
+      color: #FFF;
+    }
+    &:hover{
+      transition: all 0.3s;
+      background-color: #FFF;
+      .icon svg .real-path{
+        fill: $primary-color;
+      }
+      .text{
+        color: $primary-color;
+      }
+    }
+  }
+}

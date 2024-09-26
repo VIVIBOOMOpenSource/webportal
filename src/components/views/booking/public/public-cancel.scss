@@ -1,0 +1,282 @@
+@import "../../../../css/styles/variables";
+@import "../../../../css/styles/colors";
+
+.public-cancel-content {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+
+    .loading {
+        margin: 64px 0;
+    }
+
+    .public-cancel-container {
+        width: fit-content;
+        max-width: 80%;
+        margin: 120px 0;
+        display: flex;
+        justify-content: center;
+        padding: 60px 60px 10px 60px;
+        border-radius: 12px;
+        box-shadow: 4px 7px 12px 0 rgba(0, 0, 0, 0.10);
+        color: $primary-color;
+        background-color: white;
+
+
+        @media screen and (max-width: 515px) {
+            box-shadow: 0;
+            border-radius: 0;
+            max-width: 100%;
+            margin: 60px 0;
+            padding: 60px 18px 10px 18px;
+        }
+
+        .booking-info {
+            align-items: center;
+
+            .booking-header-container {
+                display: flex;
+                margin-bottom: 12px;
+                @media screen and (max-width: 850px) {
+                    flex-flow: column;
+                }
+
+                .booking-status-title {
+                    margin-right: 10px;
+                    margin-top: auto;
+                    margin-bottom: auto;
+                    font-size: 28px;
+                    font-weight: 600;
+                }
+
+                .booking-status-container {
+                    display: flex;
+                    flex-direction: row;
+                    margin: 0 12px;
+                    align-items: center;
+
+
+                    @media screen and (max-width: 850px) {
+                        margin: 6px 0;
+                    }
+
+                    .booking-status {
+                        font-weight: 400;
+                        width: fit-content;
+                        min-width: 80px;
+                        height: 30px;
+                        text-align: center;
+                        padding: 4px 8px;
+                        font-size: 16px;
+                        color: #fff;
+                        background-color: $secondary-color;
+
+                        &.APPROVED {
+                            background-color: #2bae66;
+                            color: #fff;
+                        }
+
+                        &.REJECTED {
+                            color: white;
+                            background-color: #fd4350;
+                            font-weight: 700;
+                        }
+
+                        &.CANCELLED {
+                            color: white;
+                            background-color: #fd4350;
+                            font-weight: 700;
+                        }
+
+                        &.LATE {
+                            color: white;
+                            background-color: #fd4350;
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+
+            .booking-description-text {
+                margin-top: 8px;
+                font-size: 1em;
+                font-weight: 500;
+                white-space: pre-wrap;
+            }
+
+            .booking-details {
+                padding: 12px 0px;
+                margin-top: 8px;
+                .booking-details-text {
+                    margin: 12px 0;
+                    font-size: 1em;
+                    font-weight: 500;
+                }
+            }
+            .cancel-button {
+                margin: 20px auto;
+                display: flex;
+                align-items: center;
+                height: 35px;
+                padding: 4px 20px;
+                font-size: 16px;
+                cursor: pointer;
+                fill: #fd4350;
+                border-radius: 20px;
+                width: fit-content;
+                transition: all 0.3s ease-out;
+                outline: solid #fd4350;
+
+                &:hover {
+                    fill: #ff757e;
+                    transform: scale(1.01);
+                    background-color: #ddd;
+                }
+            }
+        }
+    }
+
+    .error-message {
+        justify-content: center;
+        font-size: 40px;
+        font-weight: bold;
+        margin-top: 40px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/*---------------------------------
+    48. POPUP
+---------------------------------*/
+.popup-event {
+    .popup-info {
+        padding-top: 20px;
+        text-align: center;
+        color: $primary-color;
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        .bold {
+            font-weight: 400;
+        }
+
+        .title {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .popup-actions {
+        display: flex;
+        justify-content: center;
+
+        @media screen and (max-width: 850px) {
+            flex-flow: column;
+        }
+    }
+
+    .popup-close-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px !important;
+        height: 40px !important;
+        border-radius: 80px !important;
+        background-color: $secondary-color;
+        cursor: pointer !important;
+        position: absolute !important;
+        top: -20px !important;
+        right: -20px !important;
+        z-index: 2;
+        transition: background-color .2s ease-in-out;
+
+        &:hover {
+            background-color: $secondary-color-hover;
+        }
+
+        .popup-close-button-icon {
+            pointer-events: none;
+        }
+    }
+
+    .action-request {
+        margin: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 200px;
+        min-height: 40px;
+        border: 1px solid #dedeea;
+        border-radius: 10px;
+        color: #adafca;
+        font-size: 16px;
+        font-weight: 400;
+        cursor: pointer;
+        transition: border-color .2s ease-in-out, background-color .2s ease-in-out, color .2s ease-in-out;
+
+        &.with-text {
+            padding: 0 32px 0 22px;
+
+            .action-request-icon {
+                margin-right: 12px;
+            }
+        }
+
+        &.accept {
+            color: #615dfa;
+            border-color: #615dfa;
+            border-radius: 80px;
+            transition: background-color .2s ease-in-out;
+
+            .action-request-icon {
+                fill: #615dfa;
+            }
+
+            &:hover {
+                color: #fff;
+                background-color: #615dfa;
+                border-color: #615dfa;
+
+                .action-request-icon {
+                    fill: #fff;
+                }
+            }
+        }
+
+        &.decline {
+            color: #fd4350;
+            border-color: #fd4350;
+            border-radius: 80px;
+            transition: background-color .2s ease-in-out;
+
+            .action-request-icon {
+                fill: #fd4350;
+            }
+
+            &:hover {
+                color: #fff;
+                background-color: #fd4350;
+                border-color: #fd4350;
+
+                .action-request-icon {
+                    fill: #fff;
+                }
+            }
+        }
+
+        .loading {
+            margin: 0;
+        }
+
+        .action-request-icon {
+            fill: transparent;
+            opacity: .6;
+            transition: fill .2s ease-in-out, opacity .2s ease-in-out;
+        }
+    }
+}

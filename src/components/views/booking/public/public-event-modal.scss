@@ -1,0 +1,94 @@
+@import "../../../../css/styles/variables";
+@import "../../../../css/styles/colors";
+
+.public-event {
+  .popup-event {
+    width: 90%;
+    max-width: 584px ;
+    border-radius: 12px ;
+    background-color: #fff ;
+    padding: 0;
+    overflow: visible ;
+    .popup-event-info-body {
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      .text-input{
+        background-color:$background-color;
+        font-weight: 500;
+        font-size: 15px;
+        border-radius: 20px;
+        height: 40px;
+        margin-bottom: 20px;
+      }
+      label{
+        font-size: 18px;
+        font-weight: 500;
+        padding-bottom: 10px;
+      }
+      .register-btn-container {
+        display: flex;
+        justify-content: center;
+        .register-btn {
+          max-width: 180px;
+          height: 40px;
+          border-radius: 20px;
+          background-color: #7353ff;
+          color: white;
+          width: 100%;
+          display: flex;
+          flex-flow: column;
+          justify-content: center;
+          align-items: center;
+          border: 1px solid #7353ff;
+          cursor: pointer;
+          &:hover {
+            background-color: $secondary-color-hover;
+          }
+        }
+      }
+    }
+  
+    .popup-event-title {
+      font-size: 24px;
+      font-weight: 700;
+    }
+    .popup-event-subtitle {
+      margin-top: 0;
+      font-size: 18px;
+      padding-bottom: 10px;
+      font-weight: 400;
+      @media screen and (max-width: 500px) {
+        margin-top: 20px;
+      } 
+    }
+  }
+  .popup-close-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px ;
+    height: 40px ;
+    cursor: pointer;
+    position: absolute ;
+    top: -20px;
+    right: -20px;
+    z-index: 2;
+    padding: 0;
+    transition: background-color 0.2s ease-in-out;
+  
+    &:hover {
+      background-color: $secondary-color-hover;
+    }
+  
+    .popup-close-button-icon {
+      pointer-events: none;
+    }
+  }
+}
+
+.booking-recaptcha {
+  .grecaptcha-badge {
+    z-index: 20000;
+  }
+}

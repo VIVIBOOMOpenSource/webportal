@@ -1,0 +1,56 @@
+@import "../../../css/styles/variables";
+@import "../../../css/styles/colors";
+
+.public-event-tab {
+  font-family: $font;
+  max-width: 1024px;
+  width: 100%;
+  margin: 20px auto;
+  padding: 10px 40px 40px 40px;
+  @media screen and (max-width: 428px) {
+    padding: 10px 20px 40px 20px;
+  }
+  h6 {
+    font-size: 28px;
+    font-weight: 400;
+    margin: 12px;
+    color: $primary-color;
+  }
+  .event-container-sub {
+    flex-grow: 1;
+
+    .event-list {
+      flex-grow: 1;
+      width: 100%;
+      margin: 0;
+      display: grid;
+      align-items: stretch;
+      justify-content: center;
+      grid-template-columns: repeat(auto-fit, (50%));
+      @media screen and (max-width: 720px) {
+        grid-template-columns: repeat(auto-fit, 100%);
+      }
+      
+      li {
+        margin: 20px;
+      }
+    }
+
+    .events-main-footer {
+      text-align: center;
+      h3 {
+        margin-top: 12px;
+      }
+      .pagination {
+        justify-content: center;
+      }
+    }
+
+    .loading-container {
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

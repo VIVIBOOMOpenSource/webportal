@@ -1,0 +1,50 @@
+@import "../../../../css/styles/variables";
+@import "../../../../css/styles/colors";
+
+.popup-badge {
+    width: 90%;
+    max-width: 500px !important;
+    border-radius: 12px !important;
+    background-color: #fff !important;
+    padding: 0 !important;
+    overflow: visible !important;
+
+    .popup-close-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px !important;
+        height: 40px !important;
+        border-radius: 40px !important;
+        background-color: #7353ff;
+        cursor: pointer !important;
+        position: absolute !important;
+        top: -20px !important;
+        right: -20px !important;
+        z-index: 2;
+        padding: 0 !important;
+        transition: background-color 0.2s ease-in-out;
+
+        &:hover {
+            background-color: $secondary-color-hover;
+        }
+
+        .popup-close-button-icon {
+            pointer-events: none;
+        }
+    }
+    .badge-details {
+        img {
+            height: 120px;
+            margin-bottom: 10px;
+        }
+        .badge-name {
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+        padding: 30px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

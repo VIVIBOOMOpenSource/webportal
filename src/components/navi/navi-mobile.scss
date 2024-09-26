@@ -1,0 +1,110 @@
+@import "../../css/styles/colors";
+@import "../../css/styles/variables";
+
+$height: 48px;
+
+.navi-mobile {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 0px;
+  transition: height 0.3s, flex 0.3s;
+  button {
+    display: none;
+  }
+  .menu {
+    padding: 0 8px;
+    background-color: #fff;
+    svg {
+      height: 100%;
+      width: 100%;
+      .real-path {
+        fill: $primary-color;
+      }
+    }
+    &:hover{
+      .real-path {
+        fill: $secondary-color;
+      }
+    }
+  }
+  .app-button {
+    display: none;
+    padding: 0 8px;
+    background-color: #fff;
+    color: $primary-color;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  &.hide-in-app {
+    display: none;
+  }
+}
+@media screen and (max-width: $mobile-width) {
+  .navi-mobile {
+    z-index: 1;
+    height: $height;
+    background-color: #fff;
+    button {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: $height;
+      width: $height;
+    }
+    .logo {
+      position: absolute;
+      padding: 0;
+      display: block;
+      top: 0;
+      left: $height;
+      right: 0;
+      bottom: 0;
+      .logo-image {
+        -webkit-user-drag: none;
+        user-select: none;
+        -webkit-user-select: none;
+        margin: 6px 40px 6px 0;
+        width: 200px;
+        @media screen and (max-width: 979px) {
+          margin-left: 0;
+          width: 180px;
+        }
+      }
+      .text {
+        padding-left: 4px;
+        font-size: 32px;
+        font-family: Titillium Web, sans-serif;
+        color: $primary-color;
+      }
+      svg {
+        height: 100%;
+        max-width: 100%;
+        .real-path {
+          fill: $primary-color;
+        }
+      }
+    }
+    .app-button {
+      display: flex;
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: $height;
+      align-items: center;
+      justify-content: center;
+      .open-app {
+        border: 1px solid $primary-color;
+        padding: 4px 8px;
+        border-radius: 12px;
+        font-weight: 500;
+        margin-right: 5px;
+      }
+    }
+  }
+}

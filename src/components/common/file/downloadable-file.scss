@@ -1,0 +1,9 @@
+.file-link {
+  background: none;
+  border: none;
+  font-weight: 600;
+  cursor: pointer; 
+  &:hover {
+    color: gray;
+  }
+}

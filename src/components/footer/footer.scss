@@ -1,0 +1,71 @@
+@import "../../css/styles/colors";
+@import "../../css/styles/variables";
+@import "../../sass/color";
+
+// @font-face {
+  
+//   src: url(../../css/fonts/VIVITA-Bold.otf) format("woff");
+// }
+
+.footer {
+  font-family: $font;
+  color: #fff;
+  background-color: $primary-color;
+  padding: 12px;
+  width:100vw;
+  position: relative;
+  // margin-left: -50vw;
+  bottom: 0;
+
+  .footer-main {
+    display: grid;
+    width: 80%;
+    margin: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 80px;
+    @media screen and (max-width: 979px) {
+      gap: 0px 20px;
+    }
+  }
+
+  @media screen and (max-width: 979px) {
+    margin-top: 0px;
+    .footer-main{
+      width:100%;    
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  .terms {
+    text-align: right;
+
+    grid-area: 1 / 1 / 2 / 2;
+    font-size: 12px;
+    a {
+      color: $secondary-color;
+      &:hover{
+        text-decoration:underline;
+      }
+    }
+  }
+
+  .logo {
+    text-align: center;
+    grid-area: 1 / 2 / 2 / 3;
+    font-size: 24px;
+    img {
+      height: 20px;
+    }
+  }
+
+  .copyright {
+    text-align: left;
+
+    grid-area: 1 / 3 / 2 / 4;
+    font-size: 12px;
+    a {
+      color: $secondary-color;
+    }
+  }
+}

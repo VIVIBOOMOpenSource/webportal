@@ -1,0 +1,178 @@
+@import "../../../css/styles/variables";
+@import "../../../css/styles/colors";
+
+
+.members {
+  font-family: $font;
+  .members-header-container{
+    width:100%;
+    height: 250px;
+    background-color: #fff;
+    .members-header-title-container{
+      max-width: $content-max-width;
+      padding: 40px 0 0 50px;
+      color: $primary-color;
+      @media screen and (max-width: 375px) {
+        padding: 40px 0 0 30px;
+      }
+      .members-title{
+        margin-top: 50px;
+        font-size: 48px;
+        font-weight: 700;
+      }
+      .title-description {
+        font-weight: 400;
+      }
+    }
+  }
+  .separator-container{
+    width:100%;
+    height: fit-content;
+    background-color: #fff;
+    border-top: 2px solid #e2eef1;
+    border-bottom: 1px solid #e2eef1;
+    @media screen and (max-width: 760px) {
+      height: fit-content;
+    }
+    .countries {      
+      margin-left: 40px;
+      margin-top: 20px;
+      > ul {
+        > li {
+          display: inline-block;
+          background-color: #fff;
+          color: $primary-color;
+          border-radius: 80px;
+          padding: 8px 12px;
+          margin-right: 8px;
+          font-weight: 400;
+          box-shadow: 4px 7px 12px 0 rgba(0, 0, 0, 0.10);
+          transition: border-color .2s ease-in-out, background-color .2s ease-in-out, color .2s ease-in-out;
+          @media screen and (max-width: 300px) {
+            font-size: 12px;
+          }
+          &:hover,
+          &.active {
+            cursor:pointer;
+            background-color: $secondary-color;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  
+  .members-list {
+    padding: $content-padding;
+    margin: 40px 0;
+    @media screen and (max-width: 760px) {
+      margin: 0;
+      padding: 40px 20px;
+    }
+    .members-ul {
+      margin: 0;
+      display: grid;
+      align-items: stretch;
+      justify-content: center;
+      grid-template-columns: repeat(auto-fit, (33%));
+      @media screen and (max-width: 979px) {
+        grid-template-columns: repeat(auto-fit, 50%);
+      }
+      @media screen and (max-width: 630px) {
+        grid-template-columns: repeat(auto-fit, 100%);
+      }
+      > li {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+      }
+      .member-item {
+        display: flex;
+        flex-flow: column;
+        flex-grow: 1;
+        .member-item-detail {
+          display: flex;
+          flex-flow: column;
+          flex-grow: 1;
+          .user-badges {
+            flex-grow: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .title-search-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @media screen and (max-width: 760px) {
+      flex-direction: column;
+      .search-container{
+        margin-top: 20px;
+        width: 320px;
+      }
+    }
+    @media screen and (max-width: 300px) {
+      .search-container{
+        margin-top: 20px;
+        width: 200px;
+      }
+    }
+    .member-list-title{
+      font-size: 28px;
+      color: $primary-color;
+    }
+    .search-container {
+      form {
+        display: flex;
+        flex-direction: row;
+        .search-bar{
+          font-family: $font;
+          border-radius: 80px;
+          height: 40px;
+          margin: auto;
+        }
+        input{
+          font-weight: 400;
+          font-size: 15px;
+        }
+        ::-webkit-input-placeholder {
+          font-weight: 400;
+        }
+        .search-button {
+          margin: 5px;
+          padding: 8px 12px;
+          background-color: $secondary-color;
+          width: fit-content;
+          white-space: nowrap;
+          border-radius: 80px;
+          font-size: 18px;
+          font-weight: 400;
+          color: #fff;
+          box-shadow: 4px 7px 12px 0 rgba(0, 0, 0, 0.10);
+          transition: all 0.2s ease-in-out;
+          &:hover{
+            background-color: $secondary-color-hover;
+          }
+          .icon-search {
+            fill: #fff;
+            height: 18px;
+            width: 18px;
+          }
+
+        }
+      }
+    }
+  }
+  .members-main-footer {
+    text-align: center;
+    h3{
+      margin-top: 12px;
+    }
+    .pagination{
+      justify-content: center;
+    }
+  }
+}

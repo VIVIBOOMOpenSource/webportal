@@ -1,0 +1,15 @@
+.Toastify{
+  a{
+    color: #FFF;
+    font-weight: 700;
+  }
+}
+
+.Toastify__toast-container{
+  padding: 0;
+}
+
+.Toastify__close-button > svg {
+    position: absolute;
+    right: 0;
+}

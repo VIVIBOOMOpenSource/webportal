@@ -1,0 +1,15 @@
+@import '../../../css/styles/colors';
+@import '../../../css/styles/variables';
+
+.progress-bar {
+  margin: 20px auto;
+  height: 5px;
+  background-color: $light-gray-color;
+  border-radius: 3px;
+  .progress {
+    height: 100%;
+    background-color: $secondary-color;
+    border-radius: 3px;
+    transition: all 0.1s;
+  }
+}

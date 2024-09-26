@@ -1,0 +1,11 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.vivita.viviboom",
+      "sha256_cert_fingerprints":
+        ["E1:74:FA:8B:65:22:16:5E:7A:0B:3B:54:AD:E6:24:FB:B5:3C:9D:6A:12:D1:17:A5:87:95:8E:38:0E:38:8D:49"]
+    }
+  }
+]

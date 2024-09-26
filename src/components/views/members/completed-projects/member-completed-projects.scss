@@ -1,0 +1,94 @@
+@import "../../../../css/styles/variables";
+@import "../../../../css/styles/colors";
+
+.member-completed-projects {
+  font-family: $font; 
+  max-width: 1400px;
+  margin: auto;
+  width: 100%;
+  .profile-button-container {
+    height: 80%;
+    display: flex;
+    padding: 0 15px;
+    align-items: center;
+    text-decoration: none;
+    .profile-button {
+      font-family: $font;
+      cursor: pointer;
+      padding: 8px 20px;
+      border-radius: 30px;
+      width: fit-content;
+      border: 1px solid #ddd;
+      background-color: $secondary-color;
+      color: #fff;
+      font-weight: 500;
+      font-size: 16px;
+      transition: all ease-in 300ms;
+    }
+    .profile-button:hover {
+      background-color: $secondary-color-hover;
+    }
+  }
+  .member-completed-projects-content-right {
+    width: 100%;
+    @media screen and (max-width: 979px) {
+      width: 100%;
+    }   
+    .body{
+      margin: 40px 0;
+      @media screen and (max-width: 979px) {
+        margin: 0;
+      }
+      .member-completed-projects {
+        margin: 40px 0;
+        color: $primary-color;
+        .title-container {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          .header {
+            margin: 0 20px;
+            font-size: 25px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+          }
+        }
+        .completed-projects-list {
+          flex-grow: 1;
+          width: 100%;
+          margin: 20px auto;
+          display: grid;
+          align-items: center;
+          justify-content: space-evenly;
+          grid-template-columns: repeat(auto-fit, (33%));
+          @media screen and (max-width: 979px) {
+            grid-template-columns: repeat(auto-fit, 50%);
+          }
+          @media screen and (max-width: 720px) {
+            grid-template-columns: repeat(auto-fit, 100%);
+          }
+          li {
+            margin: 0;
+            height: 100%;
+            display: flex;
+            flex-flow: column;
+          }
+        }
+        .no-completed-projects {
+          margin: 10px 0 250px;
+          text-align: center;
+        }
+      }
+      .member-completed-projects-main-footer {
+        text-align: center;
+        h3 {
+          margin-top: 12px;
+        }
+        .pagination {
+          justify-content: center;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,185 @@
+.happy-birthday-rachel {
+  background: radial-gradient(at center, #FFFFE5, #FAEC6A);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .happy-birthday-anim {
+    width: 60%;
+    aspect-ratio: 1;
+    transition: transform 1s ease-in-out;
+  }
+  .popper-right-anim-container {
+    transition: transform 1s ease-in-out;
+    transform: 0;
+    position: absolute;
+    top: 45%;
+    right: 6%;
+    .popper-right-anim {
+      width: 30vw;
+      height: 30vh;
+      animation: rotate 3s linear infinite;
+      transform-origin: 80% 80%;
+    }
+  }
+  .gift-anim-container {
+    position: absolute;
+    top: 66%;
+    left: 2%;
+    transition: transform 1s ease-in-out;
+    .gift-anim {
+      width: 30vh;
+      height: 30vh;
+      opacity: 0.9;
+    }
+  }
+  .rachel-left-container {
+    transition: transform 1s ease-in-out;
+    transform: 0;
+    position: absolute;
+    top: 32%;
+    left: 2%;
+    .rachel-left {
+      width: 18vw;
+      animation: rotate 3s linear infinite;
+      transform-origin: 50% 50%;
+    }
+  }
+  .rachel-right-container {
+    transition: transform 1s ease-in-out;
+    transform: 0;
+    position: absolute;
+    top: 6%;
+    right: 4%;
+    .rachel-right {
+      width: 16vw;
+      animation: rotate 3s linear infinite;
+      transform-origin: 50% 50%;
+    }
+  }
+  .rachel-bottom-container {
+    transition: transform 1s ease-in-out;
+    transform: 0;
+    position: absolute;
+    bottom: -2vh;
+    right: 30vw;
+    .rachel-bottom {
+      width: 10vw;
+      animation: rotate 3s linear infinite;
+      transform-origin: 50% 50%;
+    }
+  }
+  .pikachu-bottom-container {
+    transition: transform 1s ease-in-out;
+    transform: 0;
+    position: absolute;
+    bottom: 2vh;
+    left: 25vw;
+    .pikachu-bottom {
+      width: 10vw;
+      transform: scale(-1, 1) rotate(30deg);
+    }
+  }
+  .text-left-container {
+    transition: transform 1s ease-in-out;
+    transform: 0;
+    position: absolute;
+    top: 7%;
+    left: 14%;
+    .text-left {
+      width: 18vw;
+      animation: rotate-text 2s linear infinite;
+      transform-origin: 50% 50%;
+    }
+  }
+  .piano-right-container {
+    transition: transform 1s ease-in-out;
+    transform: 0;
+    position: absolute;
+    bottom: -2vh;
+    right: -2vw;
+    .piano-right {
+      width: 18vw;
+      animation: rotate 3s linear infinite reverse;
+      transform-origin: 50% 50%;
+    }
+  }
+  .pokemon-card {
+    position: absolute;
+    width: 30%;
+    animation: fly-in 4s linear;
+  }
+  .hide-card {
+    transform: scale(10);
+    opacity: 0;
+    transition: 0.7s ease-in all;
+  }
+  .hide-left {
+    transform: translateX(-50vw);
+  }
+  .hide-right {
+    transform: translateX(50vw);
+  }
+  .hide-top {
+    transform: translateY(-100vh);
+  }
+  .hide-bottom {
+    transform: translateY(50vh);
+  }
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(3deg);
+    }
+    50% {
+      transform: rotate(0deg);
+    }
+    75% {
+      transform: rotate(-3deg);
+    }
+  }
+  @keyframes rotate-text {
+    0% {
+      transform: rotate(-20deg);
+    }
+    25% {
+      transform: rotate(-17deg);
+    }
+    50% {
+      transform: rotate(-20deg);
+    }
+    75% {
+      transform: rotate(-23deg);
+    }
+    100% {
+      transform: rotate(-20deg);
+    }
+  }
+
+  @keyframes fly-in {
+    0% {
+      transform: rotateY(360deg) rotateX(360deg) rotateZ(360deg) translateX(50vw) translateY(-50vh) scale(0.01);
+    }
+    100% {
+      transform: rotateY(0) rotateX(0) translateZ(0) translateX(0) translateY(0);
+    }
+  }
+  .popup-modal {
+    padding: 24px !important;
+    width: 30% !important;
+    max-width: none !important;
+    border-radius: 8px  !important;
+    .vivivault {
+      width: 100%;
+      border-radius: 8px;
+    }
+  }
+}

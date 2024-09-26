@@ -1,0 +1,307 @@
+@import "../../../../css/styles/variables";
+@import "../../../../css/styles/colors";
+
+.project-contents {
+  position: relative;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  .project-form {
+    .title {
+      font-weight: 700;
+    }
+
+    .wip-buttons,
+    .project-categories {
+      margin: 30px 0;
+      label {
+        margin: 4px 0;
+      }
+    }
+
+    
+    .project-buttons {
+      margin: 50px 0 20px 0;
+      label {
+        margin: 4px 0;
+      }
+    }
+
+    .project-buttons {
+      display: flex;
+      flex-flow: row;
+      &.hide {
+        display: none;
+      }
+      .back-button {
+        .background {
+          background-color: gray;
+        }
+      }
+      .delete-button {
+        .background {
+          background-color: red;
+        }
+      }
+      .save-button {
+        .background {
+          background-color: rgb(0, 209, 101);
+        }
+      }
+      .button-element {
+        margin: 0 12px 0 0;
+        min-width: 80px;
+        flex: 3;
+        border-radius: 12px;
+        input,
+        button {
+          padding: 0px 32px 0px 12px;
+        }
+      }
+    }
+
+    .wip-buttons {
+      /* On mouse-over, add a grey background color */
+      .container:hover input ~ .checkmark {
+        background-color: #ccc;
+      }
+      /* The container */
+      .container {
+        display: flex;
+        align-items: center;
+        position: relative;
+        // padding-left: 35px;
+        margin-top: 12px;
+        cursor: pointer;
+        font-size: 18px;
+        user-select: none;
+        /* Hide the browser's default radio button */
+        input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+        }
+        /* Create a custom radio button */
+        .checkmark {
+          height: 25px;
+          width: 25px;
+          background-color: #eee;
+          border-radius: 50%;
+          margin-right: 12px;
+        }
+        /* When the radio button is checked, add a blue background */
+        input:checked ~ .checkmark {
+          background-color: #2196F3;
+        }
+        /* Show the indicator (dot/circle) when checked */
+        input:checked ~ .checkmark:after {
+          display: block;
+        }
+        /* Style the indicator (dot/circle) */
+        .checkmark:after {
+          top: 9px;
+          left: 9px;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: white;
+        }
+        /* Create the indicator (the dot/circle - hidden when not checked) */
+        .checkmark:after {
+          content: "";
+          position: absolute;
+          display: none;
+          top: 9px;
+          left: 9px;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: white;
+        }
+      }
+    }
+
+    .editor-container {
+      .toolbar {
+        .rdw-emoji-wrapper {
+          display: none;
+        }
+        .rdw-image-wrapper {
+          .rdw-image-modal-size{
+            align-items: center;
+            :not(input) {
+              margin: 5px 0 5px 0;
+            }
+          }
+        }
+      }
+      .wrapper {
+        .editor {
+          margin: 12px 0 0 0;
+          border: 1px solid rgba(0, 0, 0, 0.05);
+          border-radius: 3px;
+          padding: 0 12px;
+          min-height: 200px;
+          max-height: 400px;
+          background-color: #fff;
+        }
+      }
+    }
+    .submit-button {
+      button {
+        padding: 0 24px 0 0;
+      }
+      .background {
+        background-color: rgb(0, 209, 101);
+      }
+    }
+
+    .photos-upload-container{
+      margin: 20px 0;
+      
+    }
+
+    .project-photos,
+    .project-files {
+      margin-bottom: 20px;
+      .no-margin {
+        margin: 0;
+      }
+      .item-row {
+        display: flex;
+        align-items: center;
+        // flex-wrap:wrap;
+        > ul {
+          height: auto;
+          max-width: 80%;
+          display: flex;
+          align-items: center;
+          margin: 20px;
+          min-width: 360px;
+          flex-wrap: wrap;
+          &.photos-upload-container {
+            > li {
+              height: 200px;
+            } 
+          }
+          > li {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            // border: 1px solid rgba(220, 220, 220, 1);
+            border-radius: 3px;
+            margin: 8px;
+            background-color: rgba(220, 220, 220, 0.25);
+            display: flex;
+            width: 140px;
+            height: 100%;
+            padding: 15px 8px 8px 8px;
+      
+            .image {
+              margin: auto;
+              max-height: 120px;
+              max-width: 120px;
+              min-height: 60px;
+              min-width: 60px;
+            }
+            .op-buttons {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              .move,
+              .delete {
+                width: 40px;
+                margin: 6px;
+              }
+              .rotate {
+                width: 40px;
+                margin: 6px;
+              }
+            }
+            .file-name {
+              margin: auto;
+            }
+            &:hover {
+              .hover-buttons {
+                display: flex;
+              }
+            }
+          }
+        }
+        .add-picture,
+        .add-file {
+          width: 80%;
+          max-width: 120px;
+          margin: 20px;
+          height: 40px;
+          border-radius: 12px;
+          background-color: $secondary-color;
+          .add-button {
+            color: white;
+            font-size: 16px;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            input {
+              display: none;
+            }
+            &.disabled {
+              cursor: not-allowed;
+            }
+            &.greyed {
+              pointer-events: none;
+              background-color: grey;
+              border-radius: 12px;
+              &.error-text {
+                color: red;
+              }
+            }
+          }
+        }
+        @media screen and (max-width: 595px) {
+          flex-direction: column;
+        }
+      }
+    }
+    .action-buttons {
+      display: flex;
+      justify-content: center;
+      .back-button{
+        margin: 20px;
+        width: 120px;
+        border-radius: 12px;
+        .background {
+          // background-color: #23d2e2;
+          background-color: grey;
+          box-shadow: 4px 7px 12px 0 rgba(35, 210, 226, 0.2);;
+        }.button-status-image {
+          left: 8px;
+        }
+        button {
+          padding: 0px 12px 0px 32px;
+        }
+      }
+      .next-button {
+        margin: 20px;
+        width: 120px;
+        border-radius: 12px;
+        .background {
+          // background-color: #23d2e2;
+          background-color: rgb(0, 209, 101);
+          box-shadow: 4px 7px 12px 0 rgba(35, 210, 226, 0.2);;
+        }
+        button {
+          padding: 0px 32px 0px 12px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 595px) {
+    border-radius: 0;
+  }
+}

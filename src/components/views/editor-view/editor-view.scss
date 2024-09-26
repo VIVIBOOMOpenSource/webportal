@@ -1,0 +1,70 @@
+.editor-view-container {
+  width: 100vw;
+  height: 100vw;
+  min-height: 0 !important;
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f2f2;
+  max-height: 400px;
+  padding: 12px;
+  padding-bottom: 0;
+
+  .editor-container {
+    display: flex;
+    flex: 1;
+    .toolbar {
+      .rdw-emoji-wrapper {
+        display: none;
+      }
+      margin: 0;
+      border-radius: 8px 8px 0 0;
+      border-color: #dedeea;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      .editor {
+        border: 1px solid #dedeea;
+        border-radius: 0 0 8px 8px;
+        padding: 0 12px;
+        background-color: #fff;
+        flex: 1;
+      }
+    }
+  }
+  .button-container {
+    padding: 0px;
+    height: 40px;
+    width: 120px;
+    margin: auto;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    background-color: #23d2e2;
+    border-radius: 8px;
+    line-height: 40px;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-evenly;
+
+    .svg-container {
+      // height: 40px;
+      // margin-top: 8px;
+      // padding-top: 4px;
+      svg {
+        fill: #fff;
+        margin-top: 10px;
+        height: 20px;
+      }
+    }
+  }
+  .hide {
+    display: none;
+  }
+  span {
+    font-size: 16px;
+  }
+}

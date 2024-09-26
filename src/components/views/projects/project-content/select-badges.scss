@@ -1,0 +1,343 @@
+// .select-badges {
+//   margin: 20px auto 40px;
+//   textarea {
+//     height: auto;
+//   }
+
+//   .badges-div {
+//     margin: 20px 0 0;
+//     .badges-div-header {
+//       display: flex;
+//       justify-content: space-between;
+//       font-weight: 700;
+//     }
+//     .back-button-div {
+//       display: inline-flex;
+//       width: 100px;
+//     }
+//     .badges-div-content {
+//       display: flex;
+//       flex-direction: column;
+//       .categories {
+//         > ul {
+//           display: flex;
+//           justify-content: center;
+//           flex-wrap: wrap;
+//           > li {
+//             display: inline-block;
+//             border-radius: 12px;
+//             padding: 8px 12px;
+//             margin: 5px;
+//             width: 200px;
+//             @media screen and (max-width: 720px) {
+//               padding: 8px 5px;
+//               margin-right: 8px;
+//               width: 150px;
+//             }
+//             &:hover,
+//             &.active {
+//               cursor: pointer;
+//               background-color: #33404d;
+//               color: #fff;
+//             }
+//             &.all{
+//               background-color: #fed400;
+//             }
+//             &.first{
+//               background-color: #fb8301;
+//             }
+//             &.second{
+//               background-color: #e02531;
+//             }
+//             &.third{
+//               background-color: #00d5b7;
+//             }
+//             &.fourth{
+//               background-color: #24d03a;
+//             }
+//             &.fifth{
+//               background-color: #00b0fa;
+//             }
+//             &.sixth{
+//               background-color: #3654de;
+//             }
+//             &.seventh{
+//               background-color: #fb3989;
+//             }
+//             &.eighth{
+//               background-color: #c75af2;
+//             }
+//             &.nineth{
+//               background-color: #a360f0;
+//             }
+//           }
+//         }
+//       }
+      
+  //   }
+  // }
+// }
+
+@import "../../../../css/styles/variables";
+@import "../../../../css/styles/colors";
+
+.select-badges {
+  margin: 20px auto 40px;
+  textarea {
+    height: auto;
+  }
+
+  .badges-div {
+    margin: 20px 0 0;
+    .badges-div-header {
+      margin: 12px 0;
+    }
+    .select-challenge-button-closed,
+    .select-badge-button-closed {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 50px;
+      border-radius: 10px;
+      margin: 30px 0 0 0;
+      padding: 20px 30px;
+      background-color: #fff;
+      border: 1px solid #eeeeee;
+      cursor: pointer;
+      transition: 0.2s all ease-in-out;
+      &:hover{
+        background-color: #E4D5FF;
+      }
+    }
+    .select-challenge-button-opened,
+    .select-badge-button-opened {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 50px;
+      border-radius: 10px 10px 0 0;
+      margin: 30px 0 0 0;
+      padding: 20px 30px;
+      background-color: #fff;
+      border: 1px solid #b5b5b5;
+      border-bottom: 0px;
+      cursor: pointer;
+      transition: 0.2s all ease-in-out;
+    }
+    .select-challenge-button-text,
+    .select-badge-button-text {
+      font-size: 20px;
+    }
+    .search-bar-container {
+      height: 70px;
+      width: 80%;
+      max-width: 350px;
+      display: flex;
+      overflow: hidden;
+      .search-bar {
+        position: relative;
+        margin: 15px 10px;
+        width: 80%;
+        label {
+          font-size: 10px;
+          font-weight: 400;
+          margin: auto;
+        }
+        input {
+          font-family: $font;
+          font-weight: 400;
+          height: 100%;
+          margin: 0;
+          color:#aaabb7;
+        }
+        ::-webkit-input-placeholder {
+          font-weight: 500;
+          font-size: 13px;
+        }
+        &:focus-within,
+        &.active {
+          label {
+            font-family: $font;
+            background-color: #fff;
+            padding: 0 6px;
+            font-size: 10px;
+            top: -6px;
+            left: 12px;
+          }
+        }
+
+      }
+      .search-button {
+        border: 0;
+        cursor: pointer;
+        background-color: $secondary-color;
+        border-radius: 80px;
+        width: fit-content;
+        height: 38px;
+        width: 38px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: $font;
+        margin: auto 0 auto 0;
+        transition: all 0.2s ease-in-out;
+        @media screen and (max-width: 650px){
+          margin-top: 18px;
+          margin-left: 5px; 
+          height: 32px;
+          width: 32px;
+        }
+        &:hover{
+          background-color: $secondary-color-hover;
+        }
+        .icon-search {
+          fill: #fff;
+          width: 13px;
+          height: 13px;
+        }
+        
+      }
+    }
+    .challenges-div-content,
+    .badges-div-content {
+      background-color: #fff;
+      border-radius: 0 0 10px 10px;
+      margin: 0 0 20px 0;
+      padding: 0 20px 20px;
+      border: 1px solid #b5b5b5;
+      border-width: 0 1px 1px 1px;
+      .categories {
+        > ul {
+          display: flex;
+          flex-wrap: wrap;
+          > li {
+            cursor: pointer;
+            background-color: #fff;
+            border-radius: 20px;
+            padding: 8px 12px;
+            color: #adafca;
+            box-shadow: 4px 7px 12px 0 rgba(0, 0, 0, 0.10);
+            white-space: nowrap;
+            margin: 5px;
+            width: fit-content;
+            transition: all .2s ease-in-out, color .2s ease-in-out;
+            @media screen and (max-width: 400px) {
+              padding: 8px 5px;
+              margin-right: 5px;
+              width: fit-content;
+              font-size: 12px;
+            }
+            &:hover{
+              cursor: pointer;
+              background-color: $secondary-color;
+              color: #fff;
+            }
+            &.active {
+              background-color: $secondary-color;
+              color: #fff;
+            }
+          }
+        }
+      }
+      .badges-shown {
+        padding: 0;
+        flex: 1;
+        
+        .badge-list {
+          margin: 0;
+          display: grid;
+          align-items: stretch;
+          justify-content: center;
+          grid-template-columns: repeat(auto-fit, (20%));
+          @media screen and (max-width: 979px) {
+            grid-template-columns: repeat(auto-fit, 25%);
+          }
+          @media screen and (max-width: 720px) {
+            grid-template-columns: repeat(auto-fit, 50%);
+          }
+          @media screen and (max-width: 400px) {
+            grid-template-columns: repeat(auto-fit, 100%);
+          }
+          > li {
+            margin: 0;
+
+            cursor: pointer;
+            &.selected {
+              .badge-item-sub {
+                box-shadow: 0px 0px 0px 4px $secondary-color;
+                position: relative;
+                .badge-checkmark {
+                  margin-top: 2px;  
+                  visibility: visible;
+                }
+              }
+            }
+          }
+        }
+
+        .no-badges {
+          display: flex;
+          justify-content: center;
+          padding: 20px 0px;
+        }
+      }
+      .all-challenges {
+        width: 100%;
+        flex-direction: column;
+      }
+      .challenges-shown {
+        padding: 0;
+        flex: 1;
+        
+        .challenge-list {
+          overflow-y: hidden!important;
+          display: grid;
+          flex-direction: column;
+          align-items: stretch;
+          justify-content: space-evenly;
+          grid-template-columns: repeat(auto-fit, 30%);
+          @media screen and (max-width: 1200px) {
+            grid-template-columns: repeat(auto-fit, 50%);
+          }
+          @media screen and (max-width: 979px) {
+            margin: 20px 0;
+            grid-template-columns: repeat(auto-fit, 50%);
+          }
+          @media screen and (max-width: 720px) {
+            grid-template-columns: repeat(auto-fit, 100%);
+          }
+          > li {
+            margin: 0;
+
+            cursor: pointer;
+            &.selected {
+              .challenge-item-sub {
+                box-shadow: 0px 0px 0px 4px $secondary-color;
+                position: relative;
+                .challenge-checkmark {
+                  margin-top: 2px;  
+                  visibility: visible;
+                }
+              }
+            }
+          }
+        }
+
+        .no-challenges {
+          display: flex;
+          justify-content: center;
+          padding: 20px 0px;
+        }
+      }
+      .challenges-main-footer,
+      .badges-main-footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
+

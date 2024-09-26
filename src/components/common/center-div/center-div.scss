@@ -1,0 +1,19 @@
+
+.center-div-outer{
+  display: table;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  .center-div-middle{
+    display: table-cell;
+    vertical-align: middle;
+    > :first-child {// center-div-inner
+      border-radius: 3px;
+      background-color: #FFF;
+      padding: 20px;
+      margin:0 auto;
+      max-width: 400px;
+    }
+  }
+}

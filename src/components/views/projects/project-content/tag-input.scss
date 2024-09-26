@@ -1,0 +1,50 @@
+.tag-input {
+  .ReactTags__selected {
+    .ReactTags__tag {
+      display: inline-block;
+      background-color: #33404d;
+      margin-right: 8px;
+      margin-bottom: 8px;
+      padding: 8px;
+      color: #ffffff;
+      border-radius: 3px;
+
+      .ReactTags__remove {
+        margin-left: 8px;
+        border-radius: 3px;
+        border-color: transparent;
+        width: 20px;
+      }
+    }
+  }
+
+  .ReactTags__suggestions ul {
+    list-style-type: none;
+    background: white;
+  }
+  .ReactTags__suggestions li {
+    padding: 8px;
+    margin-right: 8px;
+    display: inline;
+    background: #f6f6f6;
+    
+    span {
+      white-space: nowrap;
+      line-height: 48px;
+    }
+  }
+  .ReactTags__suggestions li mark {
+    text-decoration: underline;
+    background: none;
+    font-weight: 600;
+  }
+  .ReactTags__suggestions ul li.ReactTags__activeSuggestion {
+    background: #33404d;
+    cursor: pointer;
+
+    span,
+    & mark {
+      color: white;
+    }
+  }
+}

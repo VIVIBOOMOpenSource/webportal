@@ -1,0 +1,496 @@
+@import "../../../css/styles/variables";
+.boomland-info {
+  margin: 0 auto;
+  max-width: $content-max-width;
+  padding: $content-padding;
+  @media screen and (max-width: $mobile-width) {
+    padding: 88px 12px 12px;
+  }
+  .section-header {
+    // margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    .section-header-info {
+      .section-pretitle {
+        color: #8f91ac;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 0;
+      }
+      .section-title {
+        margin-top: 8px;
+        font-size: 1.625rem;
+        font-weight: 700;
+        color: #3e3f5e;
+        margin: 0;
+      }
+    }
+    .section-header-actions {
+      display: -ms-flexbox;
+      display: flex;
+      align-items: flex-end;
+      padding-bottom: 4px;
+      .section-header-subsection {
+        color: #3e3f5e;
+        font-size: 14px;
+        font-weight: 700;
+        margin-left: 26px;
+        position: relative;
+        &:before {
+          content: "";
+          width: 2px;
+          height: 10px;
+          background-color: #23d2e2;
+          position: absolute;
+          top: 2px;
+          left: -13px;
+        }
+      }
+    }
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-gap: 16px;
+    align-items: start;
+    margin-top: 32px;
+    // grid-template-areas: "slider"
+    //                       "content";
+    // grid-template-columns: 100%;
+    grid-template-areas: "slider sidebar"
+                          "content sidebar";
+    grid-template-columns: 74.6621621622% 23.9864864865%;
+    .marketplace-sidebar {
+      grid-area: sidebar;
+    }
+    .marketplace-slider {
+      grid-area: slider;
+      .slider-panel {
+        img,
+        video {
+          width: 100%;
+          height: auto;
+        }
+        .slider-panel-slide {
+          width: 100%;
+          padding-top: 49%;
+          position: relative;
+        }
+      
+        .slider-panel-slide-image {
+          width: 100%;
+          height: 100%;
+          border-radius: 12px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          overflow: hidden;
+        }
+      
+        .slider-panel-roster {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100px;
+          margin-top: 16px;
+          padding: 0 46px 0 74px;
+          border-radius: 12px;
+          background-color: #fff;
+          box-shadow: 0 0 40px 0 rgba(94, 92, 154, .06);
+          position: relative;
+      
+          .slider-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            padding: 0 12px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            .slider-control {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 20px;
+              height: 20px;
+              cursor: pointer;
+              .slider-control-icon {
+                fill: #adafca;
+                pointer-events: none;
+                opacity: .6;
+                transition: fill .2s ease-in-out,opacity .2s 
+              }
+            }
+      
+            &::before,
+            &::after {
+              content: '';
+              width: 1px;
+              height: 20px;
+              background-color: #eaeaf5;
+              position: absolute;
+              top: 40px;
+            }
+      
+            &::before {
+              left: 46px;
+            }
+      
+            &::after {
+              display: none;
+              right: 46px;
+            }
+          }
+      
+          .roster-pictures {
+            position: relative;
+            z-index: 2;
+          }
+        }
+      }
+      
+      /*------------------------
+          2. ROSTER PICTURES
+      ------------------------*/
+      .roster-pictures {
+        display: flex;
+        padding: 0 22px;
+        position: relative;
+      
+        &::before,
+        &::after {
+          content: '';
+          width: 1px;
+          height: 20px;
+          background-color: #eaeaf5;
+          position: absolute;
+          top: 14px;
+        }
+      
+        &::before {
+          left: 0;
+        }
+      
+        &::after {
+          right: 0;
+        }
+      
+        .roster-picture {
+          margin-right: 28px;
+      
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+      
+      /*------------------------
+          3. ROSTER PICTURE
+      ------------------------*/
+      .roster-picture {
+        width: 48px;
+        height: 48px;
+        cursor: pointer;
+        position: relative;
+      
+        &.active {
+          .roster-picture-image {
+            border: 4px solid #615dfa;
+          }
+        }
+      
+        .roster-picture-image {
+          width: 100%;
+          height: 100%;
+          border-radius: 12px;
+          overflow: hidden;
+          img {
+            width: auto;
+            height: 100%;
+          }
+        }
+      }
+      
+      /*--------------------
+          MEDIA QUERIES 
+      --------------------*/
+      @media screen and (max-width: 1365px) {
+        .slider-panel {
+          .slider-panel-roster {
+            justify-content: center;
+      
+            .roster-pictures {
+              display: none;
+            }
+      
+            .slider-controls {
+              &::after {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+    .marketplace-content {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-gap: 16px;
+      min-width: 0;
+      &:first-child {
+        grid-area: content;
+      }
+    }
+      .tab-box {
+        border-radius: 12px;
+        background-color: #fff;
+        box-shadow: 0 0 40px 0 rgba(94, 92, 154, 0.06);
+        .tab-box-options {
+          display: flex;
+          border-top-right-radius: 12px;
+          border-top-left-radius: 12px;
+          .tab-box-option {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 66px;
+            border-bottom: 1px solid #eaeaf5;
+            border-right: 1px solid #eaeaf5;
+            background-color: #fcfcfd;
+            cursor: pointer;
+            padding: 4px;
+            &.active {
+              background-color: #fff;
+              border-bottom: none;
+              .tab-box-option-title {
+                color: #3e3f5e;
+              }
+            }
+            &:first-child {
+              border-top-left-radius: 12px;
+            }
+            &:last-child {
+              border-right: none;
+              border-top-right-radius: 12px;
+            }
+            .tab-box-option-title {
+              color: #adafca;
+              font-size: .875rem;
+              font-weight: 700;
+              text-align: center;
+              .highlighted {
+                color: #00c7d9;
+              }
+            }
+          }
+        }
+        .tab-box-items {
+          .tab-box-item {
+            display: none;
+            &.active {
+              display: block;
+            }
+            .tab-box-item-content {
+              padding: 0 28px 48px;
+              .tab-box-item-title {
+                margin-top: 48px;
+                font-size: 22px;
+                font-weight: 700;
+              }
+              .tab-box-item-paragraph {
+                margin-top: 40px;
+                font-weight: 500;
+                a {
+                  font-weight: 600;
+                  color: blue;
+                }
+                .tab-box-item-paragraph-indent {
+                  margin-left: 25px;
+                  font-weight: 500;
+                  font-size: 14px;
+                  .link {
+                    margin-left: 15px;
+                  }
+                }
+              }
+              .tab-box-item-figure {
+                width: 80%;
+                height: 80%;
+                margin: 40px auto 0;
+                border-radius: 12px;
+                &.smaller {
+                  max-width: 600px;
+                }
+                img {
+                  width: 100%;
+                  height: 100%;
+                  border-radius: 12px;
+                  box-shadow: 3px 5px 20px 0px rgba(94, 92, 154, 0.16);
+                }
+              }
+              // .button {
+              //   background-color: #615dfa;
+              //   box-shadow: 4px 7px 12px 0 rgba(97, 93, 250, 0.2);
+              //   border-radius: 12px;
+              //   max-width: 240px;
+              //   margin: auto;
+              // }
+            }
+          }
+        }
+      }
+    
+    .mobile {
+      display: none;
+      @media screen and (max-width: 1366px) {
+        display: flex;
+      }
+    }
+    .session-container {
+      display: none;
+      @media screen and (max-width: 1366px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .sidebar-box {
+        width: 240px;
+        margin: 6px;
+        padding: 0 12px;
+        &.active {
+          border: 2px solid #615dfa;
+        }
+      }
+    }
+    .checkbox-wrap {
+      margin-top: 24px;
+      border-radius: 12px;
+      padding: 12px;
+      &.active {
+        border: 2px solid #615dfa;
+      }
+    }
+    .price-title {
+      text-align: center;
+      font-size: 38px;
+      .currency {
+        color: #00c7d9;
+      }
+    }
+    .sidebar-box {
+      padding: 32px 12px;
+      border-radius: 12px;
+      background-color: #fff;
+      box-shadow: 0 0 40px 0 rgba(50, 49, 73, 0.06);
+      .date {
+        cursor: default;
+      }
+      .description {
+        margin-top: 20px;
+        color: #3e3f5e;
+        font-weight: 700;
+        line-height: 22px;
+        text-align: center;
+        cursor: default;
+      }
+      .icon-event {
+        height: 22px;
+        width: 22px;
+        position: absolute;
+        top: 12px;
+        left: 12px;
+      }
+      // .button {
+      //   background-color: #615dfa;
+      //   box-shadow: 4px 7px 12px 0 rgba(97, 93, 250, 0.2);
+      //   border-radius: 12px;
+      //   max-width: 240px;
+      //   margin: auto;
+      // }
+      // .sidebar-box-items {
+      // }
+      .sidebar-box-title {
+        margin-top: 60px;
+        font-size: 16px;
+        font-weight: 700;
+      }
+    }
+  }
+  .project-container {
+    margin: 0;
+    max-height: 2300px;
+    display: grid;
+    align-items: stretch;
+    justify-content: center;
+    overflow-x: scroll;
+    grid-template-columns: repeat(auto-fit, 100%);
+    @media screen and (max-width: 1366px) {
+      overflow-x: unset;
+      max-height: none;
+      grid-template-columns: repeat(auto-fit, 33%);
+    }
+    @media screen and (max-width: 979px) {
+      grid-template-columns: repeat(auto-fit, 50%);
+    }
+    @media screen and (max-width: 720px) {
+      grid-template-columns: repeat(auto-fit, 100%);
+    }
+    li {
+      margin: 0;
+      height: 100%;
+      display: flex;
+      flex-flow: column;
+    }
+  }
+  .iframe-wrap {
+    // width: 80%;
+    margin: auto;
+    padding-top: 56.25%;
+    position: relative;
+    margin-bottom: 20px;
+    iframe {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 12px;
+    }
+  }
+  .button {
+    background-color: #615dfa;
+    box-shadow: 4px 7px 12px 0 rgba(97, 93, 250, 0.2);
+    border-radius: 12px;
+    max-width: 240px;
+    margin: auto;
+    &.slider-button {
+      width: 180px;
+      margin-right: 28px;
+      margin-left: 0;
+      z-index: 2;
+    }
+  }
+}
+@media screen and (max-width: 1366px) {
+  .boomland-info {
+    margin: 0 auto;
+    .marketplace-slider {
+      display: none;
+    }
+    .grid {
+      grid-template-columns: 100%;
+      grid-template-areas:
+          "slider"
+          "sidebar"
+          "content";
+      .slider-panel .slider-panel-roster {
+        justify-content: center;
+      }
+    }
+  }
+}

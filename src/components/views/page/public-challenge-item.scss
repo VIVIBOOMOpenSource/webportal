@@ -1,0 +1,51 @@
+@import "../../../css/styles/colors";
+@import "../../../css/styles/variables";
+
+.public-challenge-item {
+  flex: 1;
+  padding: 24px 0 12px 0;
+  margin: 12px;
+  border-radius: 12px;
+  background-color: #fff;
+  position: relative;
+  display: flex;
+  flex-flow:column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.05);
+  }
+  .link{
+    text-decoration: none;
+    align-items: center;
+  }
+  .challenge-image {
+    width: 160px;
+    height: 120px;
+    img {
+      height: 100%;
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+  }
+  .challenge-details {
+    text-align: center;
+    flex-grow: 1;
+    text-decoration: none;
+    .name {
+      height: 53px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .text {
+        color: #3e3f5e;
+        font-size: 20px;
+        font-weight: 700;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,125 @@
+@import "../../../../css/styles/colors";
+@import "../../../../css/styles/variables";
+
+.welcome-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 360px;
+  margin-bottom: 120px;
+  @media screen and (max-width: $mobile-width) {
+    height: 264px;
+    margin-bottom: 140px;
+  }
+  .home-background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -2;
+    height: 440px;
+    .home-background {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .home-arrow {
+      position: absolute;
+      top: 30px;
+      right: 12%;
+      width: 140px;
+      animation: bounce 2s infinite linear;
+      @media screen and (max-width: 585px) {
+        top: 10px;
+      }
+    }
+    .home-lightbulb {
+      position: absolute;
+      top: 168px;
+      right: 4%;
+      width: 50px;
+      animation: bounce 1.8s infinite linear;
+      opacity: 0.5;
+      @media screen and (max-width: 585px) {
+        display: none;
+      }
+    }
+    .home-face {
+      position: absolute;
+      top: 180px;
+      left: 5%;
+      width: 64px;
+      animation: bounce 2.1s infinite linear;
+      opacity: 0.5;
+      @media screen and (max-width: 585px) {
+        display: none;
+      }
+    }
+    .home-scribble {
+      position: absolute;
+      top: 50px;
+      left: 16%;
+      width: 80px;
+      animation: bounce 1.9s infinite linear;
+      opacity: 0.5;
+      @media screen and (max-width: 585px) {
+        top: 40px;
+      }
+    }
+    .home-scribble1 {
+      position: absolute;
+      top: 320px;
+      left: 18%;
+      width: 72px;
+      animation: bounce 2.2s infinite linear;
+      opacity: 0.4;
+      @media screen and (max-width: 585px) {
+        top: 340px;
+      }
+    }
+    .home-scribble2 {
+      position: absolute;
+      top: 320px;
+      right: 18%;
+      width: 60px;
+      animation: bounce 2.3s infinite linear;
+      opacity: 0.5;
+      @media screen and (max-width: 585px) {
+        top: 340px;
+      }
+    }
+  }
+  .home-title-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    @media screen and (max-width: $mobile-width) {
+      flex-direction: column;
+    }
+    .home-title {
+      font-size: 58px;
+      margin: 0 18px 0 0;
+      color: #fff;
+      font-family: Titillium Web, sans-serif;
+      user-select: none;
+      line-height: 58px;
+      @media screen and (max-width: $mobile-width) {
+        margin: 0 0 8px 0;
+        font-size: 36px;
+      }
+    }
+    .home-logo {
+      width: 348px;
+      user-select: none;
+    }
+  }
+  .home-subtitle {
+    font-size: 28px;
+    color: #fff;
+    user-select: none;
+    letter-spacing: 2px;
+    margin-top: 8px;
+  }
+}

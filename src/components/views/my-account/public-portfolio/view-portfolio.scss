@@ -1,0 +1,267 @@
+@import "../../../../css/styles/colors";
+@import "../../../../css/styles/variables";
+
+.view-portfolio {
+  font-family: $font;
+  .member-content-top {
+    font-family: $font;
+    justify-items: center;
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    .user-cover-image {
+      min-height: 20vw;
+      width: 100%;
+      height: fit-content;
+      align-items: center;
+      overflow: hidden;
+      object-fit: contain;
+      img {
+        height: 100%;
+        width: 100%;
+        border-radius: 0;
+      }
+    }
+    .user-profile-basic-info{
+      display: flex;
+      background-color: #fff;
+      padding: 10px;
+      height: 80px;
+      justify-content: center;
+      .user-profile-image-name-container{
+        display: flex;
+        width: 100%;
+        max-width: 1024px;
+        .user-profile-image-container {
+          position: relative;
+          width: 120px;
+          margin:0 0 0 40px;
+          .user-profile-image {
+            border-radius: 50%;
+            overflow: hidden;
+            position: absolute;
+            top: -45%;
+            height: 110px;
+            width: 110px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 5px #fff solid;
+            img {
+              max-width: 100%;
+            }
+          }
+        }
+        .user-real-name {
+          margin: auto 0 auto 20px;
+          font-weight: 700;
+          font-size: large;
+          color: $primary-color;
+          @media screen and (max-width: 300px) {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+  .body {
+    margin: 20px auto;
+    padding: 10px 40px 40px 40px;
+    width: 100%;
+    max-width: 1024px;
+    @media screen and (max-width: 720px) {
+      padding: 10px 20px 40px 20px;
+    }
+    @media screen and (max-width: 600px) {
+      padding: 10px 10px 40px 10px;
+    }
+    @media screen and (max-width: 428px) {
+      padding: 10px 4px 40px 4px;
+    }
+    .section-title {
+      color: #183b56;
+      font-weight: 600;
+      font-size: 28px;
+      margin: 50px 0 24px 30px;
+    }
+    .about-me {
+      .user-description {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 20px;
+        color: #183b56;
+        white-space: pre-wrap;
+        font-size: 1.1em;
+        line-height: 1.35em;
+      }
+    }
+    .all-projects {
+      .section-title {
+        margin-bottom: 0;
+      }
+      .member-projects {
+        padding: 15px 0 30px 0;
+        overflow: auto;
+        .project-list {
+          flex-grow: 1;
+          width: 100%;
+          margin: 0;
+          display: grid;
+          align-items: stretch;
+          justify-content: center;
+          grid-template-columns: repeat(auto-fit, (33%));
+          @media screen and (max-width: 979px) {
+            grid-template-columns: repeat(auto-fit, 50%);
+          }
+          li {
+            margin: 20px 0;
+            @media screen and (max-width: 600px) {
+              margin: 10px 0;
+            }
+          }
+        }
+        .no-projects {
+          color: #183b56;
+          @media screen and (max-width: 428px) {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+  .project-item-container {
+    background: #fff;
+    border: solid 2px #ecf1f9;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: all 0.3s ease-out;
+    margin: 0 10px;
+    &:hover {
+      box-shadow: 0px 0px 8px 0px #ecf1f9;
+      transform: scale(1.03);
+      .project-item-image {
+        transform: scale(1.03);
+      }
+      text-decoration: none;
+    }
+    .link {
+      text-decoration: none;
+    }
+    .project-item-image {
+      height: auto;
+      aspect-ratio: 4 / 3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 5px 5px 5px;
+      transition: all 0.3s ease-out;
+      img {
+        border-radius: 25px;
+        object-fit: cover;
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+    .project-item-details {
+      text-align: left;
+      margin: 5px 5px 15px 5px;
+      .project-item-title {
+        padding: 5px 0 10px 0;
+        margin: 0;
+        line-height: 1.5;
+        font-size: auto;
+        font-weight: bold;
+        color: $primary-color;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      .no-project-item-desc{
+        height: 22px;
+      }
+      .project-item-desc {
+        color: #a2a2a2;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+    }
+    @media screen and (max-width: 600px) {
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      padding: 4px;
+      margin: 0 4px;
+      .project-item-creator-container {
+        margin: 5px 2px;
+      }
+      .project-item-image {
+        padding: 5px 2px 2px 2px;
+        img {
+          border-radius: 12px;
+        }
+      }
+      .project-item-creator-image, .project-item-country-image {
+        width: 36px;
+        height: 36px;
+      }
+      .project-item-creator-name, .project-item-title, .project-item-desc {
+        font-size: 14px;
+      }
+      .project-item-title {
+        padding: 2px 0 5px 0;
+      }
+      .project-item-details {
+        margin: 2px 2px 7px 2px;
+      }
+    }
+  }
+
+  .set-image-popup {
+    text-align: center;
+    align-items: center;
+    overflow: visible !important;
+
+    .popup-close-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px !important;
+      height: 40px !important;
+      border-radius: 40px !important;
+      background-color: #7353ff;
+      cursor: pointer !important;
+      position: absolute !important;
+      top: -20px !important;
+      right: -20px !important;
+      z-index: 2;
+      padding: 0 !important;
+      transition: background-color 0.2s ease-in-out;
+
+      &:hover {
+        background-color: $secondary-color-hover;
+      }
+    }
+    .popup-title {
+      font-weight: 700;
+    }
+    .popup-text {
+      font-size: large;
+      font-weight: 400;
+      margin-bottom: 30px;
+    }
+    .popup-buttons-container {
+      display: flex;
+      justify-content: space-between;
+      .button {
+        padding: 20px;
+      }
+    }
+  }
+}
+
+.page-not-found {
+  font-size: 30px;
+  font-family: $font;
+  text-align: center;
+  margin-top: 25px;
+}

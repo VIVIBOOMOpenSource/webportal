@@ -1,0 +1,537 @@
+@import "../../../css/styles/variables";
+@import "../../../css/styles/colors";
+
+
+.booking {
+  margin: 0 auto;
+  font-family: $font;
+  
+  .members-header-container{
+    width:100%;
+    height: 250px;
+    background-color: #fff;
+    .members-header-title-container{
+      max-width: $content-max-width;
+      padding: 40px 0 0 50px;
+      color: $primary-color;
+      @media screen and (max-width: 375px) {
+        padding: 40px 0 0 30px;
+      }
+      .members-title{
+        margin-top: 50px;
+        font-size: 48px;
+        font-weight: 700;
+      }
+      .title-description {
+        font-weight: 400;
+      }
+    }
+  }
+  .separator-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width:100%;
+    background-color: #fff;
+    border-top: 2px solid #e2eef1;
+    border-bottom: 1px solid #e2eef1;
+    @media screen and (max-width: 500px) {
+      justify-content: center;
+    }
+    .button {
+      background-color: $secondary-color;
+      box-shadow: 4px 7px 12px 0 rgba(97, 93, 250, 0.2);
+      width: 15%;
+      min-width: 200px;
+      margin: 12px 50px;
+      white-space: nowrap;
+      border-radius: 80px;
+      font-size: 14px;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        box-shadow: 0px 0px 8px 0px $light-gray-color;
+        transform: scale(1.03);
+      }
+    }
+  }
+  .body{
+    padding: $content-padding;
+    @media screen and (max-width: 460px) {
+      padding: 0 !important;
+    }
+    .countries {
+      margin: 10px 0;
+      @media screen and (max-width: 460px) {
+        margin: 50px 40px 0 40px;
+      }
+      > ul {
+        > li {
+          display: inline-block;
+          background-color: #fff;
+          color: $primary-color;
+          border-radius: 80px;
+          padding: 8px 12px;
+          margin-right: 8px;
+          font-weight: 400;
+          box-shadow: 4px 7px 12px 0 rgba(0, 0, 0, 0.10);
+          transition: border-color .2s ease-in-out, background-color .2s ease-in-out, color .2s ease-in-out;
+          @media screen and (max-width: 300px) {
+            font-size: 12px;
+          }
+          &:hover,
+          &.active {
+            cursor:pointer;
+            background-color: $secondary-color;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    
+    @media screen and (max-width: 460px) {
+      margin: 30px 0 0 20px;
+    }
+    .section-title{
+      color: $primary-color;
+      font-weight: 500;
+      font-size: 28px;
+    }
+  }
+  .section-filters-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // height: 96px;
+    padding: 28px 28px;
+    border-radius: 12px;
+    box-shadow: 0 0 40px 0 rgba(94, 92, 154, 0.06);
+    background-color: $background-color;
+
+    .section-filters-bar-actions {
+      display: flex;
+      align-items: center;
+    }
+  }
+  .no-workshop {
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h3 {
+      text-align: center;
+      color: $primary-color;
+    }
+  }
+  .home-options {
+    margin: 0;
+    display: grid;
+    align-items: stretch;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, (20%));
+    @media screen and (max-width: 979px) {
+      grid-template-columns: repeat(auto-fit, 33%);
+    }
+    @media screen and (max-width: 630px) {
+      grid-template-columns: repeat(auto-fit, 100%);
+      margin: 20px;
+    }
+    .home-page-event {
+      margin: 0;
+      height: 100%;
+      display: flex;
+      flex-flow: column;
+      .home-navi-sub {
+        color: $primary-color;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        flex-flow: column;
+        height: 100%;
+        margin: 12px;
+        border-radius: 12px;
+        cursor: pointer;
+        background-color: #fff;
+        box-shadow: 4px 7px 12px 0 rgba(0, 0, 0, 0.10);
+        transition: all 0.2s ease-in-out;
+        &:hover {
+          box-shadow: 0px 0px 8px 0px $light-gray-color;
+          transform: scale(1.03);
+        }
+        .image {
+          min-width: 100%;
+          height: auto;
+          display: flex;
+          justify-content: center; align-self: flex-start;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+    .no-workshop {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      border-radius: 12px;
+      margin: 30px 0 20px 0;
+    }
+  }
+  .calendar-container{
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 0 0 40px 0 rgba(94, 92, 154, 0.06);
+    border-radius: 12px;
+    @media screen and (max-width: 460px) {
+      border-radius: 0px;
+    }
+  }
+  
+}
+
+/*--------------------
+    1. CALENDAR
+--------------------*/
+.calendar {
+  background-color: #fff;
+  flex: 1;
+  .calendar-week {
+    display: flex;
+    border-bottom: 1px solid #eaeaf5;
+    border: none;
+    .calendar-week-day {
+      width: calc(1/7) * 100%;
+      color: #8f91ac;
+      font-weight: 400px;
+      text-align: center;
+      padding: 16px 0;
+      font-size: 12px;
+      @media screen and (max-width: 400px) {
+        font-size: 10px;
+      }
+      @media screen and (max-width: 300px) {
+        font-size: 8px;
+      }
+      .week-day-short {
+        display: block;
+      }
+
+      .week-day-long {
+        display: none;
+      }
+    }
+  }
+  .calendar-days {
+    .calendar-day-row {
+      display: flex;
+
+      .calendar-day {
+        width: calc(1/7) * 100%;
+        position: relative;
+        cursor: pointer;        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 44px;
+
+        .calendar-day-number {
+          border-radius: 4px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 80%;
+          width: 80%;
+          font-weight: 400px;
+          top: 20px;
+          left: 18px;
+          z-index: 1;
+          font-size: 10px;
+          position: static;
+        }
+
+        &:last-child {
+          border-right: none;
+        }
+
+        &.active {
+          .calendar-day-number {
+            background-color: $secondary-color-hover;
+            color: #fff;
+            font-size: 10px;
+            &:hover {
+              opacity: 0.6;
+            }
+          }
+          &.current {
+            .calendar-day-number {
+              background-color: $secondary-color;
+              color: #fff;
+              @media screen and (max-width: 400px) {
+                font-size: 10px;
+              }
+            }
+          }
+        }
+
+        &.booked {
+          .calendar-day-number {
+            background-color: $primary-color;
+            color: #fff;
+            font-size: 10px;
+          }
+          .calendar-day-events {
+            .calendar-day-event {
+              background-color: #fff;
+            }
+          }
+        }
+
+        &.past {
+          cursor: not-allowed;
+          .calendar-day-number {
+            background-color: #fff;
+            color: $primary-color;
+            font-size: 10px;
+            &:hover {
+              border: none;
+              background-color: $secondary-color-hover;
+              color: #fff;
+            }
+          }
+        }
+
+        &.past,
+        &.inactive {
+          .calendar-day-number {
+            background-color: #efebff;
+            color: $primary-color;
+            font-size: 10px;
+            &:hover {
+              border: none;
+              background-color: $secondary-color-hover;
+              color: #fff;
+            }
+          }
+          &.current {
+            .calendar-day-number {
+              border: 2px solid $secondary-color;
+              background-color: #fff;
+              color: $secondary-color;
+              @media screen and (max-width: 400px) {
+                font-size: 10px;
+              }
+            }
+          }
+        }
+      
+        &.current {
+          .calendar-day-number {
+            border: 2px solid $secondary-color;
+            font-size: 12px;
+            @media screen and (max-width: 400px) {
+              font-size: 10px;
+            }
+          }
+        }
+
+        &.other-month {
+          .calendar-day-number{
+            border:none;
+            background-color: $background-color;
+            color: $primary-color;
+          }
+        }
+
+        .calendar-day-events {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: row;
+          position: absolute;
+          bottom: 10px;
+          z-index: 1;
+          
+          .calendar-day-event {
+            margin: 0 2px 0 0;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: #fff;
+
+            &:last-child {
+              margin: 0;
+            }
+
+            .calendar-day-event-text {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/*------------------------
+    7. CALENDAR WIDGET
+------------------------*/
+.calendar-widget {
+  margin-top: 16px;
+  border-radius: 12px;
+  background-color: #fff;
+  padding-bottom: 28px;
+  flex: 1;
+
+  .calendar-widget-header {
+    padding: 28px 28px 0;
+    display: flex;
+    color: $primary-color;
+    @media screen and (max-width: 400px) {
+      padding: 5px 0 0 0;
+      display: flex;
+    }
+
+    .calendar-widget-header-actions {
+      display: flex;
+      align-items: center;
+      color: $primary-color;
+      .slider-controls {
+        margin-right: 25px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .calendar-widget-title {
+    font-size: 25px;
+    font-weight: 400px;
+    color: $primary-color;
+  }
+
+  .slider-controls {
+    display: flex;
+
+    .slider-control {
+      margin-right: 18px;
+      &.invalid {
+        cursor: not-allowed;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .calendar,
+  .calendar-weekly {
+    margin-top: 26px;
+    padding: 0 28px;
+  }
+
+  .calendar-daily {
+    margin-top: 60px;
+    padding: 0 28px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .booking {
+    .calendar-container {
+      display: block;
+      
+      .calendar-widget {
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .section-header {
+    flex-direction: column;
+    .section-header-info {
+      .section-title {
+        font-size: 20px;
+      }
+    }
+    
+  }
+  .calendar-widget {
+    .calendar-widget-header {
+      display: block;
+
+      .calendar-widget-header-actions {
+        justify-content: center;
+
+        &:first-child {
+          flex-direction: column;
+
+          .slider-controls {
+            order: 2;
+            margin: 12px 0 0;
+          }
+        }
+
+        &:last-child {
+          margin-top: 18px;
+        }
+      }
+    }
+  
+    .calendar-widget-title {
+      font-size: 16px;
+    }
+  }
+}
+
+/*-----------------------------
+    19. SLIDER CONTROL
+-----------------------------*/
+.slider-control {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.slider-control .slider-control-icon {
+  fill: #adafca;
+  pointer-events: none;
+  opacity: .6;
+  transition: fill .2s ease-in-out, opacity .2s ease-in-out;
+}
+.slider-control.left .slider-control-icon {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.slider-control:hover .slider-control-icon {
+  fill: #3e3f5e;
+  opacity: 1;
+}
+.icon-big-arrow {
+  fill: #adafca;
+  width: 8px;
+  height: 12px;
+}
+.icon-check {
+  position: absolute;
+  top: -6px;
+  left: -28px;
+  // width: auto;
+  // height: 18px;
+  fill: white;
+}

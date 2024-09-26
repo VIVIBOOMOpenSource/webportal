@@ -1,0 +1,62 @@
+@import "../../../css/styles/variables";
+@import "../../../css/styles/colors";
+
+.public-member-tab {
+  font-family: $font;
+  max-width: 1024px;
+  width: 100%;
+  margin: 20px auto;
+  padding: 10px 40px 40px 40px;
+  @media screen and (max-width: 428px) {
+    padding: 10px 20px 40px 20px;
+  }
+  h6 {
+    font-size: 28px;
+    font-weight: 400;
+    margin: 12px;
+    color: $primary-color;
+  }
+  .member-container-sub {
+    flex-grow: 1;
+
+    .member-list {
+      flex-grow: 1;
+      width: 100%;
+      margin: 0;
+      display: grid;
+      align-items: stretch;
+      justify-content: center;
+      grid-template-columns: repeat(auto-fit, (50%));
+      @media screen and (max-width: 720px) {
+        grid-template-columns: repeat(auto-fit, 100%);
+      }
+      
+      li {
+        margin: 20px;
+        .public-member-item {
+          box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+          &:hover {
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          }
+        }
+      }
+    }
+
+    .members-main-footer {
+      text-align: center;
+      h3 {
+        margin-top: 12px;
+      }
+      .pagination {
+        justify-content: center;
+      }
+    }
+
+    .loading-container {
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

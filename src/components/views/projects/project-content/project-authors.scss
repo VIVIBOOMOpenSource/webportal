@@ -1,0 +1,214 @@
+@import "../../../../css/styles/variables";
+@import "../../../../css/styles/colors";
+
+.project-authors {
+  margin-bottom: 20px;
+  .no-margin {
+    margin: 0;
+  }
+  .item-row {
+    display: flex;
+    align-items: center;
+    // flex-wrap:wrap;
+    > ul {
+      height: auto;
+      max-width: 80%;
+      display: flex;
+      align-items: center;
+      margin: 20px;
+      min-width: 360px;
+      flex-wrap: wrap;
+      &.authors-container {
+        > li {
+          height: 200px;
+        } 
+      }
+      > li {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 3px;
+        margin: 8px;
+        display: flex;
+        width: 140px;
+        height: 100%;
+        padding: 15px 8px 8px 8px;
+  
+        .image {
+          margin: 12px 0;
+          height: 60px;
+          width: 60px;
+          border-radius: 50%;
+        }
+        .author-name {
+          margin: 0;
+          font-size: larger;
+        }
+        .author-role {
+          margin: 0;
+          font-weight: 400;
+        }
+        .op-buttons {
+          display: flex;
+          flex-direction: row;
+          margin-top: 8px;
+          .delete-button, .edit-button {
+            cursor: pointer;
+            border: 0;
+            background-color: red;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 6px;
+            svg {
+              width: 18px;
+              height: 18px;
+              fill: #fff;
+            }
+            &.greyed {
+              opacity: 0.3;
+              pointer-events: none;
+              cursor: default;
+            }
+          }
+          .edit-button {
+            background-color: rgb(0, 209, 101);
+          }
+        }
+        
+        &:hover {
+          .hover-buttons {
+            display: flex;
+          }
+        }
+      }
+    }
+    .add-author {
+      width: 80%;
+      max-width: 160px;
+      margin: 20px;
+      height: 40px;
+      border-radius: 12px;
+      background-color: $secondary-color;
+      .add-button {
+        color: white;
+        font-size: 16px;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        input {
+          display: none;
+        }
+        &.disabled {
+          cursor: not-allowed;
+        }
+        &.greyed {
+          pointer-events: none;
+          background-color: grey;
+          border-radius: 12px;
+          &.error-text {
+            color: red;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 595px) {
+      flex-direction: column;
+    }
+  }
+}
+.author-modal {
+  overflow: inherit !important;
+  .modal-close-button {
+    display: flex;
+    color: #ccc;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+  }
+  .author-modal-container {
+    padding: 8px;
+    h4 {
+      margin: 0;
+      font-size: large;
+    }
+    .author-selects {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+      margin: 10px 0 0 0;
+      .author-select {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 15px 0;
+        p {
+          margin: 0 8px;
+          font-size: large;
+          width: 50px;
+          text-align: right;
+          margin-right: 50px;
+        }
+        .author-dropdown {
+          width: 180px;
+          height: 40px;
+          font-weight: 500;
+          font-size: medium;
+          input {
+            height: 100%;
+          }
+        }
+    
+        .custom-option {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          font-weight: 400;
+          font-size: medium;
+    
+          img {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            margin: 0 10px 0 0;
+          }
+        }
+      }
+      .modal-error-message {
+        color: red;
+        height: 30px;
+        margin: 0;
+        
+      }
+      select {
+        min-width: 150px;
+        height: 40px;
+        padding: 0 8px;
+        font-weight: 500;
+        font-size: medium;
+        background-color: hsl(0, 0%, 100%);
+        border-color: hsl(0, 0%, 80%);
+        border-radius: 4px;
+        border-style: solid;
+        border-width: 1px;
+      }
+    }
+    .author-button {
+      width: 120px;
+      button {
+        z-index: auto;
+      }
+    }
+  }
+}
