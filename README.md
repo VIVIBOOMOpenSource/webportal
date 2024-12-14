@@ -30,7 +30,7 @@
             ```json
             "start-dev": "cross-env PORT=3028 NODE_ENV=development react-scripts --openssl-legacy-provider start"
             ```
-    1. [Downgrade Node.js to version 14](nodejs-downgrade.md).
+    1. [Downgrade Node.js to version 14](https://github.com/VIVIBOOMOpenSource/VIVIBOOMOpenSource/blob/main/nodejs-downgrade.md).
 
     
 - Open your web browser and navigate to http://localhost:3000 to access the web portal.
