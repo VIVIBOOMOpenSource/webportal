@@ -36,7 +36,7 @@
 - Open your web browser and navigate to http://localhost:3000 to access the web portal.
 
 - _Set up `express-viviboom` if you haven't already so that the backend is also running_
-- _Check our [User Guide](User%20Guide.pdf) to quickly get started using ViviBoom. [User Guide.pdf](User%20Guide.pdf)
+- _Check our [User Guide](User%20Guide.pdf) to quickly get started using ViviBoom_. [User Guide.pdf](User%20Guide.pdf)
 
 ## Contribute to the project
 We welcome contributions to make this project even better! Whether it's fixing bugs, adding new features, improving documentation, or optimizing performance, your help is appreciated.
